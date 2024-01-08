@@ -5,6 +5,7 @@ export default {
     extend: {},
     fontFamily: {
       jost: ["Jost"],
+      abril: ["Abril Fatface"],
     },
   },
   plugins: [],
