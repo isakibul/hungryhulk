@@ -4,7 +4,6 @@ import navContent from "./NavbarContext";
 import { FaShoppingBasket } from "react-icons/fa";
 import { IoMdMenu } from "react-icons/io";
 import { IoClose } from "react-icons/io5";
-// import { Link } from "react-router-dom";
 
 const Navbar = () => {
     const [scrolling, setScrolling] = useState(false);
@@ -52,9 +51,10 @@ const Navbar = () => {
                     </div>
                     <div className="hidden md:flex gap-6 items-center">
                         <ul className="hidden lg:flex gap-8 mr-4 text-xl font-semibold">
-                            {navContent.map((item, idx) => <li className="text-stone-500 hover:text-black ease-in duration-200 cursor-pointer" key={idx}>
-                                {item.title}
-                            </li>)}
+                            {navContent.map((item, idx) =>
+                                <li className="text-stone-500 hover:text-black ease-in duration-200 cursor-pointer" key={idx}>
+                                    {item.title}
+                                </li>)}
                         </ul>
                         <button
                             className="p-3 text-2xl text-amber-950 outline outline-yellow-400 outline-2 rounded-full hover:bg-yellow-400 hover:outline-white"

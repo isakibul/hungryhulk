@@ -1,6 +1,7 @@
 import Navbar from "../components/Navbar/Navbar"
 import Hero from "../components/Hero/Hero"
 import PopularDish from "../components/PopularDish/PopularDish"
+import Footer from "../components/Footer/Footer"
 
 const Home = () => {
     return (
@@ -8,6 +9,7 @@ const Home = () => {
             <Navbar />
             <Hero />
             <PopularDish />
+            <Footer />
         </div>
     )
 }
