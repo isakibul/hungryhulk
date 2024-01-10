@@ -34,8 +34,8 @@ const Navbar = () => {
 
     return (
         <>
-            <nav className={`${scrolling ? 'bg-white' : 'bg-stone-100'} ${scrolling ? 'fixed top-0 left-0 right-0' : ''}`}>
-                <div className={`flex justify-between items-center px-6 ${scrolling ? 'py-4' : 'py-6'} ease-in duration-300`}>
+            <nav className={`z-10 ${scrolling ? 'bg-white' : 'bg-stone-100'} ${scrolling ? 'fixed top-0 left-0 right-0' : ''}`}>
+                <div className={`flex justify-between items-center px-6 ${scrolling ? 'py-4' : 'py-6'} ease-in duration-500`}>
                     <div>
                         <img
                             className="w-44"
@@ -44,7 +44,7 @@ const Navbar = () => {
                     </div>
                     <div className="md:hidden">
                         <button
-                            className="text-2xl text-red-500 outline outline-offset-0.5 outline-1 outline-red-500 p-3 rounded-full hover:outline-white hover:bg-red-600 hover:text-white ease-out duration-300"
+                            className="text-2xl text-amber-950 outline outline-offset-0.5 outline-1 outline-yellow-400 p-3 rounded-full hover:outline-white hover:bg-yellow-400 ease-out duration-300"
                             onClick={() => setNavOpen(!navOpen)}
                         >
                             <IoMdMenu />
@@ -52,46 +52,50 @@ const Navbar = () => {
                     </div>
                     <div className="hidden md:flex gap-6 items-center">
                         <ul className="hidden lg:flex gap-8 mr-4 text-xl font-semibold">
-                            {navContent.map((item, idx) => <li className="text-stone-500 hover:text-black ease-in duration-200 cursor-pointer" key={idx}>{item.title}</li>)}
+                            {navContent.map((item, idx) => <li className="text-stone-500 hover:text-black ease-in duration-200 cursor-pointer" key={idx}>
+                                {item.title}
+                            </li>)}
                         </ul>
                         <button
-                            className="p-3 text-2xl text-amber-950 outline outline-red-500 outline-2 rounded-full hover:bg-red-500 hover:outline-white"
+                            className="p-3 text-2xl text-amber-950 outline outline-yellow-400 outline-2 rounded-full hover:bg-yellow-400 hover:outline-white"
                         >
                             <FaShoppingBasket />
                         </button>
                         <button
-                            className="py-3 px-7 bg-red-500 rounded-full text-xl text-gray-800 hover:outline hover:outline-white hover:outline-1"
+                            className="py-3 px-7 bg-yellow-400 rounded-full text-xl text-black hover:outline hover:outline-white hover:outline-1"
                         >
                             Reserve Table
                         </button>
                     </div>
                 </div>
-            </nav>
 
-            {/* mobile menu */}
-            {navOpen && (
-                <div className="md:hidden text-2xl flex flex-col gap-8 justify-center items-center text-center fixed top-0 left-0 right-0 bottom-0 bg-white">
-                    <ul className="flex flex-col gap-8 text-xl font-semibold">
-                        {navContent.map((item, idx) => <li className="text-stone-500 hover:text-black ease-in duration-200 cursor-pointer" key={idx}>{item.title}</li>)}
-                    </ul>
-                    <button
-                        className="p-3 text-2xl text-amber-950 outline outline-red-500 outline-2 rounded-full hover:bg-red-500 hover:outline-white"
-                    >
-                        <FaShoppingBasket />
-                    </button>
-                    <button
-                        className="py-3 px-7 bg-red-500 rounded-full text-xl text-gray-800 hover:outline hover:outline-white hover:outline-1"
-                    >
-                        Reserve Table
-                    </button>
-                    <button
-                        className='text-3xl'
-                        onClick={() => setNavOpen(false)}
-                    >
-                        <IoClose />
-                    </button>
-                </div>
-            )}
+                {/* mobile menu */}
+                {navOpen && (
+                    <div className="md:hidden text-2xl flex flex-col gap-8 justify-center items-center text-center fixed top-0 left-0 right-0 bottom-0 bg-white">
+                        <ul className="flex flex-col gap-8 text-xl font-semibold">
+                            {navContent.map((item, idx) => <li className="text-stone-500 hover:text-black ease-in duration-200 cursor-pointer" key={idx}>
+                                {item.title}
+                            </li>)}
+                        </ul>
+                        <button
+                            className="p-3 text-2xl text-amber-950 outline outline-yellow-400 outline-2 rounded-full hover:bg-yellow-400 hover:outline-white"
+                        >
+                            <FaShoppingBasket />
+                        </button>
+                        <button
+                            className="py-3 px-7 bg-yellow-400 rounded-full text-xl text-black hover:outline hover:outline-white hover:outline-1"
+                        >
+                            Reserve Table
+                        </button>
+                        <button
+                            className='text-3xl'
+                            onClick={() => setNavOpen(false)}
+                        >
+                            <IoClose />
+                        </button>
+                    </div>
+                )}
+            </nav>
         </>
     );
 }

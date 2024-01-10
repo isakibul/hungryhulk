@@ -4,8 +4,8 @@ export default {
   theme: {
     extend: {},
     fontFamily: {
-      jost: ["Jost"],
-      abril: ["Abril Fatface"],
+      poppins: ["Poppins"],
+      righteous: ["Righteous"],
     },
   },
   plugins: [],

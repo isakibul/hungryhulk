@@ -1,13 +1,13 @@
 import Navbar from "../components/Navbar/Navbar"
 import Hero from "../components/Hero/Hero"
-import Dummy from "../../Dummy"
+import PopularDish from "../components/PopularDish/PopularDish"
 
 const Home = () => {
     return (
-        <div className="font-jost bg-stone-100">
+        <div className="font-poppins bg-stone-100">
             <Navbar />
             <Hero />
-            <Dummy />
+            <PopularDish />
         </div>
     )
 }
