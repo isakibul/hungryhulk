@@ -45,7 +45,7 @@ const Footer = () => {
                     <p className="font-righteous text-2xl">Subscribe Our <br /> Newsletter</p>
                     <div className="my-3">
                         <div className="flex items-center">
-                            <input className="bg-transparent border-b border-gray-400 p-1 focus:outline-none" type="text" name="" id="" placeholder="Enter you email" />
+                            <input className="bg-transparent border-b border-gray-400 p-1 focus:outline-none w-3/5" type="text" name="" id="" placeholder="Enter you email" />
                             <button className="ml-3 text-3xl bg-yellow-400 border-2 rounded-full p-1 hover:border-white text-amber-900">
                                 <IoIosArrowRoundForward />
                             </button>
