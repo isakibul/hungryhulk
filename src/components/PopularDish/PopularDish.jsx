@@ -62,7 +62,7 @@ const PopularDish = () => {
             </div>
 
             <div className="ml-1">
-                <Carousel ref={carouselRef} responsive={responsive} itemClass="carousel-item">
+                <Carousel ref={carouselRef} arrows={false} responsive={responsive} itemClass="carousel-item">
                     {popularDish.map((dish, index) => (
                         <div key={index} className="bg-white mx-2 flex flex-col gap-5 text-center p-5 shadow-sm rounded-sm">
                             <img src={dish.image} alt="dish-image" />

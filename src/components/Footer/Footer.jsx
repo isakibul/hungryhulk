@@ -35,7 +35,7 @@ const socialIcons = [
 
 const Footer = () => {
     return (
-        <div className="py-14 mx-4 md:mx-20">
+        <div className="py-14 ml-4 md:mx-20">
             <img src={logo} alt="logo" className="w-40 mb-2" />
 
             <hr className="border-gray-400 mb-12" />
