@@ -5,7 +5,7 @@ import setMenu from "/set-menu.png";
 
 const MobileApp = () => {
     return (
-        <div className="mt-20 mx-2 p-2 md:p-4 lg:p-8 md:mx-8 lg:mx-14 bg-[#fcfae3] flex flex-col gap-5 items-center justify-center lg:flex-row rounded-lg lg:rounded-xl">
+        <div className="mx-2 p-2 md:p-4 lg:p-8 md:mx-8 lg:mx-14 bg-[#fcfae3] flex flex-col gap-5 items-center justify-center lg:flex-row rounded-lg lg:rounded-xl">
             <div className="flex flex-col items-center text-center lg:items-start lg:text-start lg:w-2/5">
                 <p className="font-righteous text-3xl md:text-5xl font-semibold">Never Feel Hungry! Download Our Mobile App Enjoy Delicious Foods</p>
                 <p className="text-sm md:text-base my-5 text-gray-800">Make online reservations, read restaurant reviews from diners, and earn points towards free meals, OpenTable is a real-time online reservation.</p>

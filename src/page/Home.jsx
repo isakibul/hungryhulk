@@ -4,7 +4,8 @@ import PopularDish from "../components/PopularDish/PopularDish"
 import Footer from "../components/Footer/Footer"
 import About from "../components/About/About"
 import MobileApp from "../components/MobileApp/MobileApp"
-import Reservation from "../components/Reservatoin/Reservation"
+import Reservation from "../components/Reservation/Reservation"
+import RegularMenu from "../components/RegularMenu/RegularMenu"
 
 const Home = () => {
     return (
@@ -13,6 +14,7 @@ const Home = () => {
             <Hero />
             <PopularDish />
             <About />
+            <RegularMenu />
             <Reservation />
             <MobileApp />
             <Footer />
