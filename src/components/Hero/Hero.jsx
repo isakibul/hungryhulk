@@ -3,7 +3,7 @@ import Slider from "./Slider";
 
 const Hero = () => {
     return (
-        <div className="px-6 pt-2 flex flex-col items-center justify-center text-center md:flex-row md:items-start md:justify-between md:text-start">
+        <div className="px-6 pt-2 flex flex-col items-center justify-center text-center md:flex-row md:items-start md:justify-between lg:text-start">
             <div className="lg:w-1/3">
                 <img className="hidden lg:block" src="/pattern.svg" alt="" />
                 <p className="font-righteous text-5xl font-bold lg:text-6xl mt-8">Unleashing the Flavors of Freshness, Served Daily Here</p>
