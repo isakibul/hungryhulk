@@ -3,6 +3,7 @@ import chef from "../../assets/images/about/chef.png"
 import cheese from "../../assets/images/about/cheese.png"
 import twentyFourSeven from "../../assets/images/about/7-24.svg"
 import { BsCashCoin } from "react-icons/bs";
+import { Link } from "react-router-dom";
 
 const About = () => {
     return (
@@ -55,7 +56,11 @@ const About = () => {
                     </div>
                 </div>
                 {/* ---------- */}
-                <button className="bg-yellow-500 mt-8 py-3 px-8 w-full lg:w-auto rounded-full outline outline-yellow-500 outline-2 hover:outline-white">About Us</button>
+                <Link to={"/about"}>
+                    <button className="mt-5 py-3 px-7 bg-yellow-400 rounded-full text-xl text-black outline outline-yellow-400 outline-2 hover:outline-white ease-in duration-300">
+                        About Us
+                    </button>
+                </Link>
             </div>
         </div>
     )

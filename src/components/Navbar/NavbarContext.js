@@ -4,10 +4,6 @@ const navContent = [
     path: "/menu",
   },
   {
-    title: "Reviews",
-    path: "/reviews",
-  },
-  {
     title: "About Us",
     path: "/about",
   },

@@ -3,14 +3,13 @@ const About = () => {
         <div className="bg-stone-100 py-20 px-6 md:px-32 lg:px-40 xl:px-72 font-poppins text-justify text-sm ">
             <div>
                 <p className="font-righteous text-2xl lg:text-4xl font-bold text-center">We Are Doing More Than <br /> You Expect</p>
-                <p className="my-10">
+                <p className="mt-10">
                     Welcome to the culinary haven that is HungryHulk - an extraordinary gastronomic escape that transcends the ordinary! Strategically located in the bustling heart of the city, HungryHulk isn't just a restaurant; it's a grandiose tapestry of flavors, an opulent symphony for the senses. The moment you step through our welcoming doors, the air becomes infused with the tantalizing aroma of culinary magic, setting the stage for an unparalleled dining spectacle. Diversity is our strength, and our menu reflects that philosophy. Whether you're a fervent food enthusiast with an adventurous palate or someone seeking the comforting embrace of familiar flavors, HungryHulk caters to all tastes. Our culinary journey spans continents, offering a global fusion of tastes that promises to satisfy even the most discerning palates.
                     <br /><br />
                     HungryHulk boasts a vibrant and inviting atmosphere, a carefully curated ambiance that seamlessly blends sophistication with a dash of whimsy. Our space is a celebration of culinary craftsmanship, where every detail is meticulously designed to ensure a memorable experience for our cherished guests.
-                    <br /><br />
-                    At the heart of HungryHulk lies an exceptional team of culinary virtuosos, masters of their craft, who have meticulously crafted a menu that elevates the art of gastronomy to new heights. From the first bite of our mouthwatering appetizers to the last indulgent taste of our hearty main courses, every dish is a revelation, a testament to the passion and creativity that define HungryHulk's culinary identity.
-                    <br /><br />
                 </p>
+                <img src="/serve.jpg" alt="" className="rounded-sm my-10" />
+                <p>At the heart of HungryHulk lies an exceptional team of culinary virtuosos, masters of their craft, who have meticulously crafted a menu that elevates the art of gastronomy to new heights. From the first bite of our mouthwatering appetizers to the last indulgent taste of our hearty main courses, every dish is a revelation, a testament to the passion and creativity that define HungryHulk's culinary identity. Whether you're a fervent food enthusiast with an adventurous palate or someone seeking the comforting embrace of familiar flavors, HungryHulk caters to all tastes. Our culinary journey spans continents, offering a global fusion of tastes that promises to satisfy even the most discerning palates.</p>
             </div>
 
             <div>

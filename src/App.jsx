@@ -4,7 +4,6 @@ import Layout from "./Layout/Layout";
 import Home from "./page/Home";
 import About from "./page/About";
 import Menu from "./page/Menu";
-import Reviews from "./page/Reviews";
 import Blogs from "./page/Blogs";
 import Contact from "./page/Contact";
 
@@ -21,9 +20,6 @@ const App = () => {
 
           {/* Route for the about page */}
           <Route path="/menu" element={<Menu />} />
-
-          {/* Route for the reviews page */}
-          <Route path="/reviews" element={<Reviews />} />
 
           {/* Route for the blogs page */}
           <Route path="/blogs" element={<Blogs />} />
