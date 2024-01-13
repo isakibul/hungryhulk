@@ -1,5 +1,9 @@
 const navContent = [
   {
+    title: "Home",
+    path: "/",
+  },
+  {
     title: "Menu",
     path: "/menu",
   },
