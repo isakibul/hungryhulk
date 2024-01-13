@@ -34,7 +34,7 @@ const Navbar = () => {
 
     return (
         <>
-            <nav className={`z-10 ${scrolling ? 'bg-white' : 'bg-stone-100'} ${scrolling ? 'fixed top-0 left-0 right-0' : ''}`}>
+            <nav className={`font-poppins z-10 ${scrolling ? 'bg-white' : 'bg-stone-100'} ${scrolling ? 'fixed top-0 left-0 right-0' : ''}`}>
                 <div className={`flex justify-between items-center px-6 ${scrolling ? 'py-4' : 'py-6'} ease-in duration-500`}>
                     <div>
                         <Link to={"/"}>
