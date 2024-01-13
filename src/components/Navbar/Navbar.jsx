@@ -4,6 +4,7 @@ import navContent from "./NavbarContext";
 import { FaShoppingBasket } from "react-icons/fa";
 import { IoMdMenu } from "react-icons/io";
 import { IoClose } from "react-icons/io5";
+import { Link } from 'react-router-dom';
 
 const Navbar = () => {
     const [scrolling, setScrolling] = useState(false);
@@ -36,10 +37,12 @@ const Navbar = () => {
             <nav className={`z-10 ${scrolling ? 'bg-white' : 'bg-stone-100'} ${scrolling ? 'fixed top-0 left-0 right-0' : ''}`}>
                 <div className={`flex justify-between items-center px-6 ${scrolling ? 'py-4' : 'py-6'} ease-in duration-500`}>
                     <div>
-                        <img
-                            className="w-44"
-                            src={logo} alt="exquisibyte logo"
-                        />
+                        <Link to={"/"}>
+                            <img
+                                className="w-44"
+                                src={logo} alt="exquisibyte logo"
+                            />
+                        </Link>
                     </div>
                     <div className="md:hidden">
                         <button
@@ -53,7 +56,9 @@ const Navbar = () => {
                         <ul className="hidden lg:flex gap-8 mr-4 text-xl font-semibold">
                             {navContent.map((item, idx) =>
                                 <li className="text-stone-500 hover:text-black ease-in duration-200 cursor-pointer" key={idx}>
-                                    {item.title}
+                                    <Link to={item.path}>
+                                        {item.title}
+                                    </Link>
                                 </li>)}
                         </ul>
                         <button

@@ -1,18 +1,23 @@
 const navContent = [
   {
-    title: "About Us",
-  },
-  {
     title: "Menu",
+    path: "/menu",
   },
   {
     title: "Reviews",
+    path: "/reviews",
+  },
+  {
+    title: "About Us",
+    path: "/about",
   },
   {
     title: "Blogs",
+    path: "/blogs",
   },
   {
-    title: "Contacts",
+    title: "Contact",
+    path: "/contact",
   },
 ];
 
