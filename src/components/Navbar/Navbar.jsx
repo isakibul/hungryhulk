@@ -78,8 +78,12 @@ const Navbar = () => {
                 {navOpen && (
                     <div className="md:hidden text-2xl flex flex-col gap-8 justify-center items-center text-center fixed top-0 left-0 right-0 bottom-0 bg-white">
                         <ul className="flex flex-col gap-8 text-xl font-semibold">
-                            {navContent.map((item, idx) => <li className="text-stone-500 hover:text-black ease-in duration-200 cursor-pointer" key={idx}>
-                                {item.title}
+                            {navContent.map((item, idx) => <li
+                                className="text-stone-500 hover:text-black ease-in duration-200 cursor-pointer"
+                                key={idx}>
+                                <Link to={item.path} onClick={() => setNavOpen(false)}>
+                                    {item.title}
+                                </Link>
                             </li>)}
                         </ul>
                         <button
