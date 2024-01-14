@@ -5,6 +5,7 @@ import Home from "./page/Home";
 import About from "./page/About";
 import Menu from "./page/Menu";
 import Blogs from "./page/Blogs";
+import BlogDetails from "./page/BlogDetails";
 import Contact from "./page/Contact";
 
 const App = () => {
@@ -18,11 +19,14 @@ const App = () => {
           {/* Route for the about page */}
           <Route path="/about" element={<About />} />
 
-          {/* Route for the about page */}
+          {/* Route for the menu page */}
           <Route path="/menu" element={<Menu />} />
 
           {/* Route for the blogs page */}
           <Route path="/blogs" element={<Blogs />} />
+
+          {/* Route for the blog details page */}
+          <Route path="/blogs/:blogId" element={<BlogDetails />} />
 
           {/* Route for the contact page */}
           <Route path="/contact" element={<Contact />} />

@@ -65,21 +65,16 @@ const Contact = () => {
                 </div>
             </div> */}
 
-            <p className="text-center font-righteous mt-20 mb-10 text-2xl md:text-4xl lg:text-5xl">Get In Touch With Us</p>
+            <p className="text-center font-righteous mt-20 mb-10 text-2xl md:text-4xl font-bold">Get In Touch With Us</p>
 
-            <div className="flex flex-col">
+            <div className="flex flex-col gap-5">
                 <label>Name:</label>
-                <br />
                 <input type="text" className="w-full py-1 px-3 focus:outline-none" />
-                <br />
                 <label>Email:</label>
-                <br />
                 <input type="text" className="w-full py-1 px-3 focus:outline-none" />
-                <br />
                 <label>Message:</label>
-                <br />
                 <textarea name="" id="" rows="5" className="w-full py-1 px-3 focus:outline-none" />
-                <button className="py-2 mt-8 bg-yellow-400">Submit</button>
+                <button className="py-2 mt-4 bg-yellow-400">Submit</button>
             </div>
         </div>
     )
