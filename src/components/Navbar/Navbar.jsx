@@ -67,7 +67,7 @@ const Navbar = () => {
                             <FaShoppingBasket />
                         </button>
                         <button
-                            className="py-3 px-7 bg-yellow-400 rounded-full text-xl text-black hover:outline hover:outline-white hover:outline-1"
+                            className="py-3 px-6 bg-yellow-400 text-black hover:outline hover:outline-white hover:outline-1"
                         >
                             Reserve Table
                         </button>

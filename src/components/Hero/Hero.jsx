@@ -1,5 +1,6 @@
 import { IoSearch } from "react-icons/io5";
 import Slider from "./Slider";
+import { Link } from "react-router-dom";
 
 const Hero = () => {
     return (
@@ -9,8 +10,12 @@ const Hero = () => {
                 <p className="font-righteous text-5xl font-bold lg:text-6xl mt-8">Unleashing the Flavors of Freshness, Served Daily Here</p>
                 <p className="text-xs md:text-base text-center lg:text-start font-semibold my-10 text-gray-600">This is a type of restaurant which typical serves food and drinks, in addition to light refreshment such as baked good or snacks. The term comes from the french word meaning food.</p>
                 <div className="flex items-center justify-center lg:justify-start gap-5">
-                    <button className="bg-yellow-400 py-2 px-4 md:py-3 md:px-8 rounded-full outline outline-yellow-400 outline-1 hover:outline-white ease-in duration-300">Explore Food</button>
-                    <button className="flex items-center gap-1 outline outline-yellow-500 outline-1 py-2 px-4 md:py-3 md:px-8 rounded-full hover:bg-yellow-400 hover:outline-white ease-in duration-300">
+                    <button className="bg-yellow-400 py-2 px-4 md:py-3 md:px-8 outline outline-yellow-400 outline-1 hover:outline-white ease-in duration-300">
+                        <Link to={"/menu"}>
+                            Explore Food
+                        </Link>
+                    </button>
+                    <button className="flex items-center gap-1 outline outline-yellow-500 outline-1 py-2 px-4 md:py-3 md:px-8 hover:bg-yellow-400 hover:outline-white ease-in duration-300">
                         <IoSearch style={{ fontSize: "25px" }} />
                         Search
                     </button>

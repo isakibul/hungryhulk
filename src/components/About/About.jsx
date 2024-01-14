@@ -57,7 +57,7 @@ const About = () => {
                 </div>
                 {/* ---------- */}
                 <Link to={"/about"}>
-                    <button className="mt-5 py-3 px-7 bg-yellow-400 rounded-full text-xl text-black outline outline-yellow-400 outline-2 hover:outline-white ease-in duration-300">
+                    <button className="mt-5 py-3 px-7 bg-yellow-400 text-xl text-black outline outline-yellow-400 outline-2 hover:outline-white ease-in duration-300">
                         About Us
                     </button>
                 </Link>

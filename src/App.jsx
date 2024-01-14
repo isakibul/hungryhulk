@@ -1,12 +1,12 @@
 import React from "react";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Layout from "./Layout/Layout";
-import Home from "./page/Home";
-import About from "./page/About";
-import Menu from "./page/Menu";
-import Blogs from "./page/Blogs";
-import BlogDetails from "./page/BlogDetails";
-import Contact from "./page/Contact";
+import Home from "./pages/Home";
+import About from "./pages/About";
+import Menu from "./pages/Menu";
+import Blogs from "./pages/Blogs";
+import BlogDetails from "./pages/BlogDetails";
+import Contact from "./pages/Contact";
 
 const App = () => {
   return (

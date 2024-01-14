@@ -2,6 +2,7 @@ import { FaApple } from "react-icons/fa";
 import googlePlay from "/google-playstore.png";
 import mobileApp from "/mobile-app.png";
 import setMenu from "/set-menu.png";
+import { Link } from "react-router-dom";
 
 const MobileApp = () => {
     return (
@@ -15,15 +16,19 @@ const MobileApp = () => {
                             <FaApple />
                         </div>
                         <div>
-                            <p className="text-[8px] xl:text-[12px]">Download on</p>
-                            <p className="text-[12px] xl:text-[16px]">App Store</p>
+                            <a href="https://www.apple.com/app-store/" target="_blank">
+                                <p className="text-[8px] xl:text-[12px]">Download on</p>
+                                <p className="text-[12px] xl:text-[16px]">App Store</p>
+                            </a>
                         </div>
                     </div>
                     <div className="flex gap-1 items-center justify-center outline outline-1 text-amber-950 outline-yellow-300 py-1 px-6 xl:px-8 rounded-full cursor-pointer hover:shadow-lg ease-in duration-300">
                         <img src={googlePlay} alt="" className="w-5 h-5" />
                         <div>
-                            <p className="text-[8px] xl:text-[12px]">Download on</p>
-                            <p className="text-[12px] xl:text-[16px]">Play Store</p>
+                            <a href="https://play.google.com/store/apps/?hl=en&gl=US" target="_blank">
+                                <p className="text-[8px] xl:text-[12px]">Download on</p>
+                                <p className="text-[12px] xl:text-[16px]">Play Store</p>
+                            </a>
                         </div>
                     </div>
                 </div>

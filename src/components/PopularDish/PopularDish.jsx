@@ -78,7 +78,7 @@ const PopularDish = () => {
                             <div className="flex justify-between mt-5">
                                 <p className="font-righteous text-3xl">{dish.price}</p>
                                 <button
-                                    className="outline outline-yellow-400 outline-1 hover:bg-yellow-400 font-semibold py-2 px-4 text-black rounded-full ease-in duration-300"
+                                    className="outline outline-yellow-400 outline-1 hover:bg-yellow-400 font-semibold py-2 px-4 text-black ease-in duration-300"
                                 >
                                     Add To Cart
                                 </button>
