@@ -7,6 +7,7 @@ import Menu from "./pages/Menu";
 import Blogs from "./pages/Blogs";
 import BlogDetails from "./pages/BlogDetails";
 import Contact from "./pages/Contact";
+import CartPage from "./pages/CartPage";
 
 const App = () => {
   return (
@@ -30,6 +31,9 @@ const App = () => {
 
           {/* Route for the contact page */}
           <Route path="/contact" element={<Contact />} />
+
+          {/* Route for the cart page */}
+          <Route path="/cart" element={<CartPage />} />
 
           {/* Optional: 404 Not Found page */}
           <Route path="*" element={<h2>404 Not Found</h2>} />

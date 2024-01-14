@@ -7,7 +7,7 @@ import { Link } from "react-router-dom";
 
 const About = () => {
     return (
-        <div className="mt-20 px-6 lg:px-12 lg:flex items-center justify-center lg:gap-28">
+        <div className="my-20 px-6 lg:px-12 lg:flex items-center justify-center lg:gap-28">
             <div className="">
                 <img src={salad} alt="salad" className="hidden lg:block ml-auto mr-0 -mb-20 xl:-mb-20" />
                 <img src={chef} alt="chef" className="lg:scale-125" />
@@ -57,7 +57,7 @@ const About = () => {
                 </div>
                 {/* ---------- */}
                 <Link to={"/about"}>
-                    <button className="mt-5 py-3 px-7 bg-yellow-400 text-xl text-black outline outline-yellow-400 outline-2 hover:outline-white ease-in duration-300">
+                    <button className="mt-10 w-full lg:w-auto py-2 px-6 bg-yellow-400 text-xl text-black outline outline-yellow-400 outline-2 hover:outline-white ease-in duration-300">
                         About Us
                     </button>
                 </Link>

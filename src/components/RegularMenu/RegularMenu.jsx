@@ -2,8 +2,13 @@ import React, { useState } from "react";
 import { MdStarRate } from "react-icons/md";
 import Tags from "./menuTags";
 import { RegularMenuItem } from "../../assets/data/regularMenu";
+import { useSelector, useDispatch } from "react-redux";
+import { addToCart } from "../../store/cartSlice";
 
 const RegularMenu = () => {
+    const items = useSelector((state) => state.allCart.items);
+    const dispatch = useDispatch();
+
     const [selectedCategory, setSelectedCategory] = useState("All");
 
     const handleTagClick = (category) => {
@@ -56,6 +61,7 @@ const RegularMenu = () => {
                             <p className="font-righteous text-3xl">{dish.price}</p>
                             <button
                                 className="outline outline-yellow-400 outline-1 hover:bg-yellow-400 font-semibold py-2 px-4 text-black ease-in duration-300"
+                                onClick={() => dispatch(addToCart(dish))}
                             >
                                 Add To Cart
                             </button>

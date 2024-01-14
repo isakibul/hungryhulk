@@ -61,11 +61,13 @@ const Navbar = () => {
                                     </Link>
                                 </li>)}
                         </ul>
-                        <button
-                            className="p-3 text-2xl text-amber-950 outline outline-yellow-400 outline-2 rounded-full hover:bg-yellow-400 hover:outline-white"
-                        >
-                            <FaShoppingBasket />
-                        </button>
+                        <Link to={"/cart"}>
+                            <button
+                                className="p-3 text-2xl text-amber-950 outline outline-yellow-400 outline-2 rounded-full hover:bg-yellow-400 hover:outline-white"
+                            >
+                                <FaShoppingBasket />
+                            </button>
+                        </Link>
                         <button
                             className="py-3 px-6 bg-yellow-400 text-black hover:outline hover:outline-white hover:outline-1"
                         >
@@ -76,7 +78,7 @@ const Navbar = () => {
 
                 {/* mobile menu */}
                 {navOpen && (
-                    <div className="md:hidden text-2xl flex flex-col gap-8 justify-center items-center text-center fixed top-0 left-0 right-0 bottom-0 bg-white">
+                    <div className="md:hidden text-2xl flex flex-col gap-8 justify-center items-center text-center fixed top-0 left-0 right-0 bottom-0 bg-white z-50">
                         <ul className="flex flex-col gap-8 text-xl font-semibold">
                             {navContent.map((item, idx) => <li
                                 className="text-stone-500 hover:text-black ease-in duration-200 cursor-pointer"
@@ -86,11 +88,14 @@ const Navbar = () => {
                                 </Link>
                             </li>)}
                         </ul>
-                        <button
-                            className="p-3 text-2xl text-amber-950 outline outline-yellow-400 outline-2 rounded-full hover:bg-yellow-400 hover:outline-white"
-                        >
-                            <FaShoppingBasket />
-                        </button>
+                        <Link to={"/cart"}>
+                            <button
+                                className="p-3 text-2xl text-amber-950 outline outline-yellow-400 outline-2 rounded-full hover:bg-yellow-400 hover:outline-white"
+                                onClick={() => setNavOpen(false)}
+                            >
+                                <FaShoppingBasket />
+                            </button>
+                        </Link>
                         <button
                             className="py-3 px-7 bg-yellow-400 rounded-full text-xl text-black hover:outline hover:outline-white hover:outline-1"
                         >
