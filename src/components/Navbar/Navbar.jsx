@@ -104,7 +104,10 @@ const Navbar = () => {
                                 key={idx}
                                 className={`ease-in duration-200 cursor-pointer ${location.pathname === item.path ? 'text-amber-900' : 'text-stone-500 hover:text-black'}`}
                             >
-                                <Link to={item.path}>
+                                <Link
+                                    to={item.path}
+                                    onClick={() => setNavOpen(false)}
+                                >
                                     {item.title}
                                 </Link>
                             </li>
