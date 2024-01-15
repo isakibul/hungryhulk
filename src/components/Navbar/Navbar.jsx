@@ -103,7 +103,7 @@ const Navbar = () => {
                             </li>
                         ))}
                     </ul>
-                    <Link to={"/cart"}>
+                    <Link to={"/cart"} onClick={() => setNavOpen(false)}>
                         <button
                             className="relative p-3 text-amber-950 outline outline-yellow-400 outline-2 rounded-full hover:bg-yellow-400 hover:outline-white"
                         >
@@ -118,6 +118,7 @@ const Navbar = () => {
                     >
                         Reserve Table
                     </button>
+
                     <button
                         className='text-3xl'
                         onClick={() => setNavOpen(false)}
