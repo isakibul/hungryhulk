@@ -2,11 +2,20 @@ import { createSlice } from "@reduxjs/toolkit";
 import { RegularMenuItem } from "../assets/data/regularMenu";
 
 const initialState = {
-  cart: [],
+  cart: getCartFromLocalStorage(),
   items: RegularMenuItem,
   totalQuantity: 0,
   totalPrice: 0,
 };
+
+function getCartFromLocalStorage() {
+  const storedCart = localStorage.getItem("cart");
+  return storedCart ? JSON.parse(storedCart) : [];
+}
+
+function saveCartToLocalStorage(cart) {
+  localStorage.setItem("cart", JSON.stringify(cart));
+}
 
 const cartSlice = createSlice({
   name: "cart",
@@ -21,6 +30,8 @@ const cartSlice = createSlice({
       } else {
         state.cart.push({ ...action.payload, quantity: 1 });
       }
+
+      saveCartToLocalStorage(state.cart);
     },
 
     getCartTotal: (state) => {
@@ -46,6 +57,7 @@ const cartSlice = createSlice({
 
     removeItem: (state, action) => {
       state.cart = state.cart.filter((item) => item.id !== action.payload);
+      saveCartToLocalStorage(state.cart);
     },
 
     increaseItemQuantity: (state, action) => {
@@ -55,6 +67,7 @@ const cartSlice = createSlice({
         }
         return item;
       });
+      saveCartToLocalStorage(state.cart);
     },
 
     decreaseItemQuantity: (state, action) => {
@@ -64,6 +77,7 @@ const cartSlice = createSlice({
         }
         return item;
       });
+      saveCartToLocalStorage(state.cart);
     },
   },
 });

@@ -10,7 +10,7 @@ export const popularDish = [
     image: dish2,
     title: "Burger",
     ratings: [1, 2, 3, 4, 5],
-    description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+    description: "Lorem ipsum dolor sit sit amet, consectetur adipiscing elit.",
     price: "$10.50",
   },
   {
@@ -18,7 +18,7 @@ export const popularDish = [
     image: dish1,
     title: "Pasta",
     ratings: [1, 2, 3, 4, 5],
-    description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+    description: "Lorem ipsum dolor sit sit amet, consectetur adipiscing elit.",
     price: "$12.8",
   },
   {
@@ -26,7 +26,7 @@ export const popularDish = [
     image: dish3,
     title: "Shawarma",
     ratings: [1, 2, 3, 4, 5],
-    description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+    description: "Lorem ipsum dolor sit sit amet, consectetur adipiscing elit.",
     price: "$14.80",
   },
   {
@@ -34,7 +34,7 @@ export const popularDish = [
     image: dish5,
     title: "French Fries",
     ratings: [1, 2, 3, 4, 5],
-    description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+    description: "Lorem ipsum dolor sit sit amet, consectetur adipiscing elit.",
     price: "$11.40",
   },
   {
@@ -42,7 +42,7 @@ export const popularDish = [
     image: dish4,
     title: "Fish Curry",
     ratings: [1, 2, 3, 4, 5],
-    description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+    description: "Lorem ipsum dolor sit sit amet, consectetur adipiscing elit.",
     price: "$8.40",
   },
 ];

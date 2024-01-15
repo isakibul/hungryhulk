@@ -3,7 +3,7 @@ import PopularDish from "../components/PopularDish/PopularDish"
 import About from "../components/About/About"
 import MobileApp from "../components/MobileApp/MobileApp"
 import Reservation from "../components/Reservation/Reservation"
-import RegularMenu from "../components/RegularMenu/RegularMenu"
+import Reviews from "../components/Reviews/Reviews"
 
 const Home = () => {
     return (
@@ -11,7 +11,7 @@ const Home = () => {
             <Hero />
             <PopularDish />
             <About />
-            <RegularMenu />
+            <Reviews />
             <Reservation />
             <MobileApp />
         </div>

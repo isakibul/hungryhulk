@@ -2,11 +2,11 @@ import { FaApple } from "react-icons/fa";
 import googlePlay from "/google-playstore.png";
 import mobileApp from "/mobile-app.png";
 import setMenu from "/set-menu.png";
-import { Link } from "react-router-dom";
+
 
 const MobileApp = () => {
     return (
-        <div className="mx-2 p-2 md:p-4 lg:p-8 md:mx-8 lg:mx-14 bg-[#fcfae3] flex flex-col gap-5 items-center justify-center lg:flex-row rounded-lg lg:rounded-xl">
+        <div className="mx-2 p-2 md:px-4 lg:px-8 md:mx-8 lg:mx-14 bg-[#fcfae3] flex flex-col gap-5 items-center justify-center lg:flex-row lg:gap-32 rounded-lg lg:rounded-xl">
             <div className="flex flex-col items-center text-center lg:items-start lg:text-start lg:w-2/5">
                 <p className="font-righteous text-3xl md:text-5xl font-semibold">Never Feel Hungry! Download Our Mobile App Enjoy Delicious Foods</p>
                 <p className="text-sm md:text-base my-5 text-gray-800">Make online reservations, read restaurant reviews from diners, and earn points towards free meals, OpenTable is a real-time online reservation.</p>
@@ -34,9 +34,9 @@ const MobileApp = () => {
                 </div>
             </div>
 
-            <div className="mt-5 flex">
-                <img src={mobileApp} alt="" className="md:scale-75" />
-                <img src={setMenu} alt="" className="hidden lg:block w-30 h-30 mt-auto mb-20" />
+            <div className="mt-5 lg:mt-0 flex lg:gap-10">
+                <img src={mobileApp} alt="" className="lg:w-2/4" />
+                <img src={setMenu} alt="" className="hidden lg:block w-30 h-30 mt-auto" />
             </div>
         </div>
     )

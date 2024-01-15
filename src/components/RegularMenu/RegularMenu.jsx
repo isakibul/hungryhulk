@@ -1,27 +1,30 @@
 import React, { useState } from "react";
 import { MdStarRate } from "react-icons/md";
-import { RegularMenuItem } from "../../assets/data/regularMenu"
+import { RegularMenuItem } from "../../assets/data/regularMenu";
 import Tags from "./menuTags";
-import { useDispatch } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 import { addToCart } from "../../store/cartSlice";
-import { toast, ToastContainer, } from 'react-toastify';
-import 'react-toastify/dist/ReactToastify.css';
+import { toast, ToastContainer } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 
 const RegularMenu = () => {
     const dispatch = useDispatch();
+    const cart = useSelector((state) => state.cart);
+
     const [selectedCategory, setSelectedCategory] = useState("All");
 
     const handleTagClick = (category) => {
         setSelectedCategory(category);
     };
 
-    const filteredMenuItems = selectedCategory === "All"
-        ? RegularMenuItem // Assuming RegularMenuItem is defined somewhere
-        : RegularMenuItem.filter((item) => item.category === selectedCategory);
+    const filteredMenuItems =
+        selectedCategory === "All"
+            ? RegularMenuItem
+            : RegularMenuItem.filter((item) => item.category === selectedCategory);
 
     const toastStyle = {
-        position: 'top-right',
-        autoClose: 3000,
+        position: "top-right",
+        autoClose: 2000,
         hideProgressBar: false,
         closeOnClick: true,
         pauseOnHover: true,
@@ -45,7 +48,6 @@ const RegularMenu = () => {
             </p>
 
             <div className="my-6 md:mx-8 xl:mx-20 flex flex-wrap items-center justify-center">
-                {/* Assuming Tags is defined somewhere */}
                 {Tags.map((tag, idx) => (
                     <button
                         key={idx}
