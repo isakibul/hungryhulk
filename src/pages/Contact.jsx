@@ -1,37 +1,5 @@
-// import { FaLocationDot } from "react-icons/fa6";
-// import { FaPhoneAlt } from "react-icons/fa";
-// import { FaRegClock } from "react-icons/fa";
-
-// const hours = [
-//     {
-//         day: "sun",
-//         hour: "12 to 8 pm"
-//     },
-//     {
-//         day: "mon",
-//         hour: "closed",
-//     },
-//     {
-//         day: "tue",
-//         hour: "12 to 8 pm",
-//     },
-//     {
-//         day: "wed",
-//         hour: "12 to 10 pm",
-//     },
-//     {
-//         day: "thurs",
-//         hour: "12 to 10 pm",
-//     },
-//     {
-//         day: "fri",
-//         hour: "12 to 10 pm",
-//     },
-//     {
-//         day: "sat",
-//         hour: "12 to 10 pm",
-//     }
-// ]
+import { FaLocationDot } from "react-icons/fa6";
+import { RiCellphoneFill } from "react-icons/ri";
 
 const Contact = () => {
     return (
@@ -39,31 +7,20 @@ const Contact = () => {
             <div>
                 <img src="/map.jpg" alt="" className="" />
             </div>
-            {/* <div className="text-sm flex flex-col text-start gap-4 mt-10">
+            <div className="text-sm flex flex-col md:flex-row gap-10 text-start mt-10 md:text-xl font-semibold">
                 <div className="flex gap-5 items-start">
-                    <p className="flex items-center gap-1 text-end"><FaLocationDot />Location:</p>
+                    <p className="flex items-center gap-2 text-end"><FaLocationDot />Location:</p>
                     <div>
                         <p>One Boynton Plaza</p>
                         <p>307 E Woolbright Rd</p>
                         <p>Boynton, FL 33435</p>
                     </div>
                 </div>
-                <div className="flex gap-9 items-start">
-                    <p className="flex items-center gap-1 text-end"><FaPhoneAlt />Phone:</p>
+                <div className="flex gap-2 items-start">
+                    <p className="flex items-center gap-1 text-end mr-8 md:mr-1"><RiCellphoneFill />Phone:</p>
                     <p>(561) 509-8131</p>
                 </div>
-                <div className="flex gap-9 items-start">
-                    <p className="flex items-center gap-1 mt-1"><FaRegClock />Hours:</p>
-                    <div className="leading-8 text-center">
-                        {hours.map((hour) => (
-                            <div className="uppercase flex gap-2">
-                                <p className="text-right font-semibold">{hour.day}:</p>
-                                <p className="text-left">{hour.hour}</p>
-                            </div>
-                        ))}
-                    </div>
-                </div>
-            </div> */}
+            </div>
 
             <p className="text-center font-righteous mt-20 mb-10 text-2xl md:text-4xl font-bold">Get In Touch With Us</p>
 

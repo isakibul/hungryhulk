@@ -8,6 +8,8 @@ import Blogs from "./pages/Blogs";
 import BlogDetails from "./pages/BlogDetails";
 import Contact from "./pages/Contact";
 import CartPage from "./pages/CartPage";
+import ScrollToTop from "react-scroll-to-top";
+import { FaArrowTurnUp } from "react-icons/fa6";
 
 const App = () => {
   return (
@@ -39,6 +41,21 @@ const App = () => {
           <Route path="*" element={<h2>404 Not Found</h2>} />
         </Routes>
       </Layout>
+      <ScrollToTop
+        smooth
+        style={{
+          backgroundColor: '#eab308',
+          color: '#fff',
+          display: 'flex',
+          justifyContent: 'center',
+          alignContent: 'center',
+          fontSize: '24px',
+          borderRadius: '50%',
+          padding: '5px',
+        }}
+        component={<FaArrowTurnUp />}
+        className="z-20"
+      />
     </Router>
   );
 };
