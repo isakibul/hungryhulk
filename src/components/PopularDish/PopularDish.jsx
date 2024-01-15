@@ -4,6 +4,8 @@ import "react-multi-carousel/lib/styles.css";
 import { popularDish } from "../../assets/data/popularDish";
 import { IoIosArrowRoundBack, IoIosArrowRoundForward } from "react-icons/io";
 import { MdStarRate } from "react-icons/md";
+import { useDispatch } from "react-redux";
+import { addToCart } from "../../store/cartSlice";
 
 const responsive = {
     superLargeDesktop: {
@@ -26,6 +28,8 @@ const responsive = {
 
 const PopularDish = () => {
     const carouselRef = useRef(null);
+
+    const dispatch = useDispatch();
 
     const handlePreviousClick = () => {
         if (carouselRef.current) {
@@ -79,6 +83,7 @@ const PopularDish = () => {
                                 <p className="font-righteous text-3xl">{dish.price}</p>
                                 <button
                                     className="outline outline-yellow-400 outline-1 hover:bg-yellow-400 font-semibold py-2 px-4 text-black ease-in duration-300"
+                                    onClick={() => dispatch(addToCart(dish))}
                                 >
                                     Add To Cart
                                 </button>

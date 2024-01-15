@@ -76,7 +76,7 @@ const Navbar = () => {
                         >
                             <FaShoppingBasket />
                             {totalQuantity > 0 && (
-                                <span className="absolute text-xs -top-1 -right-1 bg-red-500 text-white px-2 py-1 rounded-full">{totalQuantity}</span>
+                                <span className="absolute text-xs -top-1 -right-1 bg-amber-900 text-white px-2 py-1 rounded-full">{totalQuantity}</span>
                             )}
                         </button>
                     </Link>
@@ -109,7 +109,7 @@ const Navbar = () => {
                         >
                             <FaShoppingBasket />
                             {localTotalQuantity > 0 && (
-                                <span className="absolute text-xs -top-1 -right-1 bg-red-500 text-white px-1 rounded-full">{localTotalQuantity}</span>
+                                <span className="absolute text-xs -top-1 -right-1 bg-amber-900 text-white px-1 rounded-full">{localTotalQuantity}</span>
                             )}
                         </button>
                     </Link>

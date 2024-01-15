@@ -27,17 +27,20 @@ const cartSlice = createSlice({
       let { totalQuantity, totalPrice } = state.cart.reduce(
         (cartTotal, cartItem) => {
           const { price, quantity } = cartItem;
-          const itemTotal = parseFloat(price) * quantity;
+          const numericPrice = parseFloat(price.replace("$", ""));
+          const itemTotal = numericPrice * quantity;
+
           cartTotal.totalPrice += itemTotal;
           cartTotal.totalQuantity += quantity;
           return cartTotal;
         },
         {
-          totalPrice: 0,
           totalQuantity: 0,
+          totalPrice: 0,
         }
       );
-      state.totalPrice = parseFloat(totalPrice.toFixed(2));
+
+      state.totalPrice = Math.ceil(parseFloat(totalPrice.toFixed(2)));
       state.totalQuantity = totalQuantity;
     },
 

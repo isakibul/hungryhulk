@@ -1,32 +1,51 @@
 import React, { useState } from "react";
 import { MdStarRate } from "react-icons/md";
+import { RegularMenuItem } from "../../assets/data/regularMenu"
 import Tags from "./menuTags";
-import { RegularMenuItem } from "../../assets/data/regularMenu";
-import { useSelector, useDispatch } from "react-redux";
+import { useDispatch } from "react-redux";
 import { addToCart } from "../../store/cartSlice";
+import { toast, ToastContainer, } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 const RegularMenu = () => {
-    const items = useSelector((state) => state.allCart.items);
     const dispatch = useDispatch();
-
     const [selectedCategory, setSelectedCategory] = useState("All");
 
     const handleTagClick = (category) => {
         setSelectedCategory(category);
     };
 
-    const filteredMenuItems =
-        selectedCategory === "All"
-            ? RegularMenuItem
-            : RegularMenuItem.filter((item) => item.category === selectedCategory);
+    const filteredMenuItems = selectedCategory === "All"
+        ? RegularMenuItem // Assuming RegularMenuItem is defined somewhere
+        : RegularMenuItem.filter((item) => item.category === selectedCategory);
+
+    const toastStyle = {
+        position: 'top-right',
+        autoClose: 3000,
+        hideProgressBar: false,
+        closeOnClick: true,
+        pauseOnHover: true,
+        draggable: true,
+    };
+
+    const handleAddToCart = (dish) => {
+        dispatch(addToCart(dish));
+
+        toast.success(`${dish.title} added to Cart!`, {
+            ...toastStyle,
+        });
+    };
 
     return (
         <div className="px-4 pt-2">
+            <ToastContainer />
+
             <p className="font-righteous text-3xl md:text-4xl lg:text-5xl xl-text-7xl font-bold text-center">
                 Our Regular Menu Pack
             </p>
 
             <div className="my-6 md:mx-8 xl:mx-20 flex flex-wrap items-center justify-center">
+                {/* Assuming Tags is defined somewhere */}
                 {Tags.map((tag, idx) => (
                     <button
                         key={idx}
@@ -61,7 +80,7 @@ const RegularMenu = () => {
                             <p className="font-righteous text-3xl">{dish.price}</p>
                             <button
                                 className="outline outline-yellow-400 outline-1 hover:bg-yellow-400 font-semibold py-2 px-4 text-black ease-in duration-300"
-                                onClick={() => dispatch(addToCart(dish))}
+                                onClick={() => handleAddToCart(dish)}
                             >
                                 Add To Cart
                             </button>

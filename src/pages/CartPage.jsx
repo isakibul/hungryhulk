@@ -74,7 +74,7 @@ const CartPage = () => {
 
                     <li className="flex gap-7">
                         <span>Total amount:</span>
-                        <span>{totalPrice}</span>
+                        <span>${totalPrice}</span>
                     </li>
                 </ul>
                 <button className="bg-yellow-400 py-2 px-5 font-semibold mt-5">
