@@ -1,15 +1,14 @@
-import React, { useState } from "react";
+import { useState } from "react";
 import { MdStarRate } from "react-icons/md";
-import { RegularMenuItem } from "../../assets/data/regularMenu";
-import Tags from "./menuTags";
-import { useDispatch, useSelector } from "react-redux";
+import { MenuItems } from "../../assets/data/menu/menuItems";
+import Tags from "../../assets/data/menu/menuTags";
+import { useDispatch } from "react-redux";
 import { addToCart } from "../../store/cartSlice";
 import { toast, ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 
 const RegularMenu = () => {
     const dispatch = useDispatch();
-    const cart = useSelector((state) => state.cart);
 
     const [selectedCategory, setSelectedCategory] = useState("All");
 
@@ -19,8 +18,8 @@ const RegularMenu = () => {
 
     const filteredMenuItems =
         selectedCategory === "All"
-            ? RegularMenuItem
-            : RegularMenuItem.filter((item) => item.category === selectedCategory);
+            ? MenuItems
+            : MenuItems.filter((item) => item.category === selectedCategory);
 
     const toastStyle = {
         position: "top-right",
@@ -40,7 +39,7 @@ const RegularMenu = () => {
     };
 
     return (
-        <div className="px-4 pt-2">
+        <div className="px-4 pt-2 font-rubik">
             <ToastContainer />
 
             <p className="font-righteous text-3xl md:text-4xl lg:text-5xl xl-text-7xl font-bold text-center">

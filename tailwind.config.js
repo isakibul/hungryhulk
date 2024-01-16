@@ -4,7 +4,7 @@ export default {
   theme: {
     extend: {},
     fontFamily: {
-      poppins: ["Rubik"],
+      rubik: ["Rubik"],
       righteous: ["Righteous"],
     },
   },

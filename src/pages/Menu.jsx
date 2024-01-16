@@ -1,8 +1,8 @@
-import RegularMenu from "../components/RegularMenu/RegularMenu"
+import RegularMenu from "../components/Menu/Menu"
 
 const Menu = () => {
     return (
-        <div className="bg-stone-100 font-poppins">
+        <div className="bg-stone-100">
             <RegularMenu />
         </div>
     )

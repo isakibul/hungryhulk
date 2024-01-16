@@ -1,11 +1,11 @@
-import client1 from "../images/clients/client-1.jpg";
-import client2 from "../images/clients/client-2.jpg";
-import client3 from "../images/clients/client-3.jpg";
-import client4 from "../images/clients/client-4.jpg";
-import client5 from "../images/clients/client-5.jpg";
-import client6 from "../images/clients/client-6.jpg";
-import client7 from "../images/clients/client-7.jpg";
-import client8 from "../images/clients/client-8.jpg";
+import client1 from "../../../assets/images/clients/client-1.jpg";
+import client2 from "../../../assets/images/clients/client-2.jpg";
+import client3 from "../../../assets/images/clients/client-3.jpg";
+import client4 from "../../../assets/images/clients/client-4.jpg";
+import client5 from "../../../assets/images/clients/client-5.jpg";
+import client6 from "../../../assets/images/clients/client-6.jpg";
+import client7 from "../../../assets/images/clients/client-7.jpg";
+import client8 from "../../../assets/images/clients/client-8.jpg";
 
 const reviews = [
   {

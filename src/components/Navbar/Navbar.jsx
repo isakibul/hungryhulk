@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { useLocation, Link } from 'react-router-dom';
-import logo from "/logo.png";
+import logo from "../../assets/images/site-logo.png";
 import navContent from "./NavbarContext";
 import { FaShoppingBasket } from "react-icons/fa";
 import { IoMdMenu } from "react-icons/io";
@@ -48,7 +48,7 @@ const Navbar = () => {
     }, []);
 
     return (
-        <nav className={`font-poppins z-10 ${scrolling ? 'bg-white' : 'bg-stone-100'} ${scrolling ? 'fixed top-0 left-0 right-0' : ''}`}>
+        <nav className={`font-rubik z-10 ${scrolling ? 'bg-white' : 'bg-stone-100'} ${scrolling ? 'fixed top-0 left-0 right-0' : ''}`}>
             <div className={`flex justify-between items-center px-6 ${scrolling ? 'py-4' : 'py-6'} ease-in duration-500`}>
                 <div>
                     <Link to={"/"}>

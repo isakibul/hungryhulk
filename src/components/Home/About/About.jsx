@@ -1,21 +1,17 @@
-import salad from "../../assets/images/about/salad.png"
-import chef from "../../assets/images/about/chef.png"
-import cheese from "../../assets/images/about/cheese.png"
-import twentyFourSeven from "../../assets/images/about/7-24.svg"
+import chefs from "../../../assets/images/about/chefs.jpg"
+import twentyFourSeven from "../../../assets/images/about/7-24.svg"
 import { BsCashCoin } from "react-icons/bs";
 import { Link } from "react-router-dom";
 
 const About = () => {
     return (
-        <div className="my-20 px-6 lg:px-12 lg:flex items-center justify-center lg:gap-5">
-            <div className="xl:-ml-20">
-                <img src={salad} alt="salad" className="hidden xl:block ml-auto mr-20 xl:-mb-60" />
-                <img src={chef} alt="chef" className="md:scale-50 lg:scale-75" />
-                <img src={cheese} alt="cheese" className="hidden xl:block ml-20 lg:-mt-32" />
+        <div className="my-20 px-6 lg:px-12 lg:flex items-center justify-center lg:gap-2">
+            <div className="xl:-ml-10">
+                <img src={chefs} alt="chef" className="scale:50 md:scale-100 lg:scale-75 rounded-lg" />
             </div>
             <div className="text-center lg:text-start lg:w-2/4">
                 <p className="font-righteous text-2xl md:text-3xl lg:text-5xl font-bold my-5">We Are More Than Multiple Service</p>
-                <p className="text-xs lg:text-base text-gray-800 text-justify">Welcome to a distinctive establishment where culinary delights intertwine with an array of beverages, complemented by an assortment of delectable baked goods and savory snacks. This unique dining experience transcends the ordinary, drawing inspiration from the rich French culinary heritage, as the term itself originates from the elegant French word synonymous with the art of nourishment. Immerse yourself in a world where gastronomic pleasures and refreshing libations harmonize, creating an ambiance that transcends the ordinary, inviting you to savor every moment in the pursuit of culinary excellence.</p>
+                <p className="text-xs lg:text-base text-gray-800 text-justify font-semibold">Welcome to a distinctive establishment where culinary delights intertwine with an array of beverages, complemented by an assortment of delectable baked goods and savory snacks. This unique dining experience transcends the ordinary, drawing inspiration from the rich French culinary heritage, as the term itself originates from the elegant French word synonymous with the art of nourishment.</p>
 
                 <div className="flex gap-4 mt-5 justify-center items-center lg:items-start lg:justify-start">
                     <div className="flex items-center gap-2">

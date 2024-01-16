@@ -1,4 +1,4 @@
-import logo from "/logo.png";
+import logo from "../../assets/images/site-logo.png";
 import { IoIosArrowRoundForward } from "react-icons/io";
 import { FaFacebookF } from "react-icons/fa";
 import { FaInstagram } from "react-icons/fa";
@@ -35,8 +35,8 @@ const socialIcons = [
 
 const Footer = () => {
     return (
-        <div className="bg-stone-100">
-            <div className="py-14 ml-4 md:mx-20 font-poppins">
+        <div className="bg-stone-100 font-semibold">
+            <div className="py-14 ml-4 md:mx-20 font-rubik">
                 <img src={logo} alt="logo" className="w-40 mb-2" />
 
                 <hr className="border-gray-400 mb-12" />
@@ -53,7 +53,7 @@ const Footer = () => {
                             </div>
                             <div className="mt-4 flex gap-4">
                                 {socialIcons.map((icon) =>
-                                    <a key={icon.id} href={icon.link} target="_blank">
+                                    <a key={icon.id} href="" target="_blank">
                                         <button className="p-2.5 text-xl text-amber-900 border border-gray-500 rounded-full hover:bg-yellow-400 hover:border-white ease-in duration-300" title={icon.title}>
                                             {icon.icon}
                                         </button>
@@ -68,7 +68,7 @@ const Footer = () => {
                         <div className="flex flex-col gap-2">
                             {
                                 services.map((service, idx) =>
-                                    <a className="cursor-pointer text-gray-700 hover:text-black hover:underline" key={idx} href={service.link}>
+                                    <a className="cursor-pointer text-gray-700 hover:text-black hover:underline" key={idx} href="">
                                         {service.title}
                                     </a>
                                 )}
@@ -79,7 +79,7 @@ const Footer = () => {
                         <p className="font-righteous text-2xl mb-3">Quick Links</p>
                         <div className="flex flex-col">
                             {quickLinks.map((link, idx) =>
-                                <a className="cursor-pointer text-gray-700 hover:text-black hover:underline" key={idx} href={quickLinks.link}>{link.title}</a>
+                                <a className="cursor-pointer text-gray-700 hover:text-black hover:underline" key={idx} href="">{link.title}</a>
                             )}
                         </div>
                     </div>
@@ -88,7 +88,7 @@ const Footer = () => {
                         <p className="font-righteous text-2xl mb-3">About</p>
                         <div className="flex flex-col">
                             {about.map((about, idx) =>
-                                <a className="cursor-pointer text-gray-700 hover:text-black hover:underline" key={idx} href={about.link}>{about.title}</a>
+                                <a className="cursor-pointer text-gray-700 hover:text-black hover:underline" key={idx} href="">{about.title}</a>
                             )}
                         </div>
                     </div>
@@ -97,7 +97,7 @@ const Footer = () => {
                         <p className="font-righteous text-2xl mb-3">Help</p>
                         <div className="flex flex-col">
                             {helps.map((help, idx) =>
-                                <a className="cursor-pointer text-gray-700 hover:text-black hover:underline" key={idx} href={help.link}>{help.title}</a>
+                                <a className="cursor-pointer text-gray-700 hover:text-black hover:underline" key={idx} href="">{help.title}</a>
                             )}
                         </div>
                     </div>

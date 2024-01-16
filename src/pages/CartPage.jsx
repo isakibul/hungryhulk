@@ -22,7 +22,7 @@ const CartPage = () => {
     }, [cart]);
 
     return (
-        <div className="bg-stone-100 font-poppins py-20 px-6">
+        <div className="bg-stone-100 font-rubik py-20 px-6">
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
                 {cart?.map((data) => (
                     <div key={data.id} className="bg-white p-2 relative">

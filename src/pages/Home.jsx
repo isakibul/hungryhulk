@@ -1,13 +1,13 @@
-import Hero from "../components/Hero/Hero"
-import PopularDish from "../components/PopularDish/PopularDish"
-import About from "../components/About/About"
-import MobileApp from "../components/MobileApp/MobileApp"
-import Reservation from "../components/Reservation/Reservation"
-import Reviews from "../components/Reviews/Reviews"
+import Hero from "../components/Home/Hero/Hero"
+import PopularDish from "../components/Home/PopularDish/PopularDish";
+import About from "../components/Home/About/About"
+import MobileApp from "../components/Home/MobileApp/MobileApp"
+import Reservation from "../components/Home/Reservation/Reservation"
+import Reviews from "../components/Home/Reviews/Reviews"
 
 const Home = () => {
     return (
-        <div className="font-poppins bg-stone-100">
+        <div className="font-rubik bg-stone-100">
             <Hero />
             <PopularDish />
             <About />

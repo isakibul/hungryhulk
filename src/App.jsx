@@ -16,28 +16,13 @@ const App = () => {
     <Router>
       <Layout>
         <Routes>
-          {/* Route for the home page */}
           <Route path="/" element={<Home />} />
-
-          {/* Route for the about page */}
           <Route path="/about" element={<About />} />
-
-          {/* Route for the menu page */}
           <Route path="/menu" element={<Menu />} />
-
-          {/* Route for the blogs page */}
           <Route path="/blogs" element={<Blogs />} />
-
-          {/* Route for the blog details page */}
           <Route path="/blogs/:blogId" element={<BlogDetails />} />
-
-          {/* Route for the contact page */}
           <Route path="/contact" element={<Contact />} />
-
-          {/* Route for the cart page */}
           <Route path="/cart" element={<CartPage />} />
-
-          {/* Optional: 404 Not Found page */}
           <Route path="*" element={<h2>404 Not Found</h2>} />
         </Routes>
       </Layout>

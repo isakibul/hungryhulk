@@ -1,9 +1,9 @@
 import { createSlice } from "@reduxjs/toolkit";
-import { RegularMenuItem } from "../assets/data/regularMenu";
+import { MenuItems } from "../assets/data/menu/menuItems";
 
 const initialState = {
   cart: getCartFromLocalStorage(),
-  items: RegularMenuItem,
+  items: MenuItems,
   totalQuantity: 0,
   totalPrice: 0,
 };

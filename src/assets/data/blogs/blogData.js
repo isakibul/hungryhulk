@@ -1,7 +1,7 @@
-import blog1 from "../images/Blogs/blog-1.jpg";
-import blog2 from "../images/Blogs/blog-2.jpg";
-import blog3 from "../images/Blogs/blog-3.jpg";
-import blog4 from "../images/Blogs/blog-4.jpg";
+import blog1 from "../../images/blogs/blog-1.jpg";
+import blog2 from "../../images/blogs/blog-2.jpg";
+import blog3 from "../../images/blogs/blog-3.jpg";
+import blog4 from "../../images/blogs/blog-4.jpg";
 
 const blogs = [
   {

@@ -1,11 +1,9 @@
 import React, { useRef } from "react";
 import Carousel from "react-multi-carousel";
 import "react-multi-carousel/lib/styles.css";
-import { popularDish } from "../../assets/data/popularDish";
+import popularDish from "./popularDishes";
 import { IoIosArrowRoundBack, IoIosArrowRoundForward } from "react-icons/io";
 import { MdStarRate } from "react-icons/md";
-import { useDispatch } from "react-redux";
-import { addToCart } from "../../store/cartSlice";
 
 const responsive = {
     superLargeDesktop: {
@@ -28,8 +26,6 @@ const responsive = {
 
 const PopularDish = () => {
     const carouselRef = useRef(null);
-
-    const dispatch = useDispatch();
 
     const handlePreviousClick = () => {
         if (carouselRef.current) {
