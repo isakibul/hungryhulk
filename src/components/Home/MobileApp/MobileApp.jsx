@@ -11,7 +11,7 @@ const MobileApp = () => {
                 <p className="font-righteous text-3xl md:text-5xl font-semibold">Never Feel Hungry! Download Our Mobile App Enjoy Delicious Foods</p>
                 <p className="text-sm md:text-base my-5 text-gray-800 font-semibold">Make online reservations, read restaurant reviews from diners, and earn points towards free meals, OpenTable is a real-time online reservation.</p>
                 <div className="flex items-center justify-center gap-4">
-                    <div className="flex gap-1 text-amber-950 bg-yellow-300 py-1 px-6 xl:px-8 rounded-full outline outline-yellow-400 outline-1 cursor-pointer hover:outline-white ease-in duration-300">
+                    <div className="flex gap-1 text-black bg-yellow py-1 px-6 xl:px-8 rounded-full outline outline-yellow outline-1 cursor-pointer hover:outline-white ease-in duration-300">
                         <div className="text-2xl md:text-4xl">
                             <FaApple />
                         </div>
@@ -22,8 +22,8 @@ const MobileApp = () => {
                             </a>
                         </div>
                     </div>
-                    <div className="flex gap-1 items-center justify-center outline outline-1 text-amber-950 outline-yellow-300 py-1 px-6 xl:px-8 rounded-full cursor-pointer hover:shadow-lg ease-in duration-300">
-                        <img src={googlePlay} alt="" className="w-5 h-5" />
+                    <div className="flex gap-1 items-center justify-center outline outline-1 text-black outline-yellow py-1 px-6 xl:px-8 rounded-full cursor-pointer hover:shadow-lg ease-in duration-300">
+                        <img src={googlePlay} alt="" className="w-8 h-8" />
                         <div>
                             <a href="https://play.google.com/store/apps/?hl=en&gl=US" target="_blank">
                                 <p className="text-[8px] xl:text-[12px]">Download on</p>

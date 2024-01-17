@@ -3,7 +3,7 @@ import restaurant from "../assets/images/about-page/restaurant.jpg"
 
 const About = () => {
     return (
-        <div className="bg-stone-100 font-rubik py-20 px-6 md:px-32 lg:px-40 xl:px-72 font-poppins text-justify text-sm ">
+        <div className="bg-stone font-rubik py-20 px-6 md:px-32 lg:px-40 xl:px-72 font-poppins text-justify text-sm ">
             <div>
                 <p className="font-righteous text-2xl lg:text-4xl font-bold text-center">We Are Doing More Than <br /> You Expect</p>
                 <p className="mt-10 font-semibold">

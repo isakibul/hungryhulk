@@ -35,26 +35,26 @@ const socialIcons = [
 
 const Footer = () => {
     return (
-        <div className="bg-stone-100 font-semibold">
+        <div className="bg-stone font-semibold">
             <div className="py-14 ml-4 md:mx-20 font-rubik">
                 <img src={logo} alt="logo" className="w-40 mb-2" />
 
-                <hr className="border-gray-400 mb-12" />
+                <hr className="border-gray mb-12" />
 
                 <div className="grid md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5">
                     <div className="mb-6">
                         <p className="font-righteous text-2xl">Subscribe Our <br /> Newsletter</p>
                         <div className="my-3">
                             <div className="flex items-center">
-                                <input className="bg-transparent border-b border-gray-400 p-1 focus:outline-none w-3/5" type="text" name="" id="" placeholder="Enter you email" />
-                                <button className="ml-3 text-3xl bg-yellow-400 border-2 rounded-full p-1 hover:border-white text-amber-900">
+                                <input className="bg-stone border-b border-black p-1 focus:outline-none w-3/5" type="text" name="" id="" placeholder="Enter you email" />
+                                <button className="ml-3 text-3xl bg-yellow border border-black rounded-full p-1 hover:border-white text-amber">
                                     <IoIosArrowRoundForward />
                                 </button>
                             </div>
                             <div className="mt-4 flex gap-4">
                                 {socialIcons.map((icon) =>
                                     <a key={icon.id} href="" target="_blank">
-                                        <button className="p-2.5 text-xl text-amber-900 border border-gray-500 rounded-full hover:bg-yellow-400 hover:border-white ease-in duration-300" title={icon.title}>
+                                        <button className="p-2.5 text-xl text-amber border border-black rounded-full hover:bg-yellow hover:border-white ease-in duration-300" title={icon.title}>
                                             {icon.icon}
                                         </button>
                                     </a>
@@ -68,7 +68,7 @@ const Footer = () => {
                         <div className="flex flex-col gap-2">
                             {
                                 services.map((service, idx) =>
-                                    <a className="cursor-pointer text-gray-700 hover:text-black hover:underline" key={idx} href="">
+                                    <a className="cursor-pointer text-gray hover:text-black hover:underline" key={idx} href="">
                                         {service.title}
                                     </a>
                                 )}
@@ -79,7 +79,7 @@ const Footer = () => {
                         <p className="font-righteous text-2xl mb-3">Quick Links</p>
                         <div className="flex flex-col">
                             {quickLinks.map((link, idx) =>
-                                <a className="cursor-pointer text-gray-700 hover:text-black hover:underline" key={idx} href="">{link.title}</a>
+                                <a className="cursor-pointer text-gray hover:text-black hover:underline" key={idx} href="">{link.title}</a>
                             )}
                         </div>
                     </div>
@@ -88,7 +88,7 @@ const Footer = () => {
                         <p className="font-righteous text-2xl mb-3">About</p>
                         <div className="flex flex-col">
                             {about.map((about, idx) =>
-                                <a className="cursor-pointer text-gray-700 hover:text-black hover:underline" key={idx} href="">{about.title}</a>
+                                <a className="cursor-pointer text-gray hover:text-black hover:underline" key={idx} href="">{about.title}</a>
                             )}
                         </div>
                     </div>
@@ -97,7 +97,7 @@ const Footer = () => {
                         <p className="font-righteous text-2xl mb-3">Help</p>
                         <div className="flex flex-col">
                             {helps.map((help, idx) =>
-                                <a className="cursor-pointer text-gray-700 hover:text-black hover:underline" key={idx} href="">{help.title}</a>
+                                <a className="cursor-pointer text-gray hover:text-black hover:underline" key={idx} href="">{help.title}</a>
                             )}
                         </div>
                     </div>

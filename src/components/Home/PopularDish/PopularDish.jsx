@@ -46,14 +46,14 @@ const PopularDish = () => {
                 <div className="flex gap-4 items-center lg:mr-10">
                     {/* left arrow */}
                     <button
-                        className="text-2xl md:text-4xl text-amber-950 outline outline-yellow-400 outline-2 rounded-full p-1 hover:bg-yellow-400 hover:outline-white hover:p-.5 ease-in duration-300"
+                        className="text-2xl md:text-4xl text-amber outline outline-yellow outline-2 rounded-full p-1 hover:bg-yellow hover:outline-white hover:p-.5 ease-in duration-300"
                         onClick={handlePreviousClick}
                     >
                         <IoIosArrowRoundBack />
                     </button>
                     {/* right arrow */}
                     <button
-                        className="text-2xl md:text-4xl text-amber-950 outline outline-yellow-400 outline-2 rounded-full p-1 hover:bg-yellow-400 hover:outline-white hover:p-.5 ease-in duration-300"
+                        className="text-2xl md:text-4xl text-amber outline outline-yellow outline-2 rounded-full p-1 hover:bg-yellow hover:outline-white hover:p-.5 ease-in duration-300"
                         onClick={handleNextClick}
                     >
                         <IoIosArrowRoundForward />
@@ -67,7 +67,7 @@ const PopularDish = () => {
                         <div key={index} className="bg-white mx-2 flex flex-col gap-5 text-center p-5 shadow-sm rounded-sm">
                             <img src={dish.image} alt="dish-image" />
                             <p className="font-righteous text-4xl">{dish.title}</p>
-                            <div className="flex justify-center text-3xl text-yellow-400">{dish.ratings.map((_rating, idx) =>
+                            <div className="flex justify-center text-3xl text-yellow">{dish.ratings.map((_rating, idx) =>
                                 <div
                                     key={idx}
                                 >

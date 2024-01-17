@@ -13,7 +13,7 @@ const Hero = () => {
                 <p className="text-xs md:text-base text-center lg:text-start font-semibold my-7 text-gray-600">This is a type of restaurant which typical serves food and drinks, in addition to light refreshment such as baked good or snacks. The term comes from the french word meaning food.</p>
                 <div className="flex justify-center lg:justify-start">
                     <Link to={"/menu"}>
-                        <button className="flex items-center gap-2 bg-yellow-400 py-2 px-4 md:py-3 md:px-8 outline outline-yellow-400 outline-1 hover:outline-white ease-in duration-300">
+                        <button className="flex items-center gap-2 bg-yellow py-2 px-4 md:py-3 md:px-8 outline outline-yellow outline-1 hover:outline-white ease-in duration-300">
                             Explore Our Food Now
                             <FaArrowRightLong />
                         </button>

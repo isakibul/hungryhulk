@@ -22,7 +22,7 @@ const CartPage = () => {
     }, [cart]);
 
     return (
-        <div className="bg-stone-100 font-rubik py-20 px-6">
+        <div className="bg-stone font-rubik py-20 px-6">
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
                 {cart?.map((data) => (
                     <div key={data.id} className="bg-white p-2 relative">
@@ -39,7 +39,7 @@ const CartPage = () => {
 
                         <div className="flex justify-between my-5">
                             <button
-                                className="bg-yellow-400 py-2 px-3"
+                                className="bg-yellow py-2 px-3"
                                 onClick={() => dispatch(decreaseItemQuantity(data.id))}
                                 disabled={data.quantity == 0}
                             >
@@ -49,7 +49,7 @@ const CartPage = () => {
                             <span className="text-3xl font-bold">{data.quantity}</span>
 
                             <button
-                                className="bg-yellow-400 py-2 px-3"
+                                className="bg-yellow py-2 px-3"
                                 onClick={() => dispatch(increaseItemQuantity(data.id))}
                             >
                                 <FaPlus />
@@ -77,7 +77,7 @@ const CartPage = () => {
                         <span>${totalPrice}</span>
                     </li>
                 </ul>
-                <button className="bg-yellow-400 py-2 px-5 font-semibold mt-5">
+                <button className="bg-yellow py-2 px-5 font-semibold mt-5">
                     Go to Checkout
                 </button>
             </div>

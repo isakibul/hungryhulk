@@ -4,7 +4,7 @@ import map from "../assets/images/contact/map.jpg"
 
 const Contact = () => {
     return (
-        <div className="bg-stone-100 font-rubik py-20 px-6 md:px-32 lg:px-40 xl:px-72">
+        <div className="bg-stone font-rubik py-20 px-6 md:px-32 lg:px-40 xl:px-72">
             <div>
                 <img src={map} alt="" />
             </div>
@@ -32,7 +32,7 @@ const Contact = () => {
                 <input type="text" className="w-full py-1 px-3 focus:outline-none" />
                 <label>Message:</label>
                 <textarea name="" id="" rows="5" className="w-full py-1 px-3 focus:outline-none" />
-                <button className="py-2 mt-4 bg-yellow-400">Submit</button>
+                <button className="py-2 mt-4 bg-yellow">Submit</button>
             </div>
         </div>
     )

@@ -7,6 +7,14 @@ export default {
       rubik: ["Rubik"],
       righteous: ["Righteous"],
     },
+    colors: {
+      yellow: "#facc15",
+      white: "#ffffff",
+      amber: "#78350f",
+      black: "#000000",
+      gray: "#4b5563",
+      stone: "#f5f5f4",
+    },
   },
   plugins: [],
 };

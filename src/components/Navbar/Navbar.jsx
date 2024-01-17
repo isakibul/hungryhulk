@@ -48,7 +48,7 @@ const Navbar = () => {
     }, []);
 
     return (
-        <nav className={`font-rubik z-10 ${scrolling ? 'bg-white' : 'bg-stone-100'} ${scrolling ? 'fixed top-0 left-0 right-0' : ''}`}>
+        <nav className={`font-rubik z-10 ${scrolling ? 'bg-white' : 'bg-stone'} ${scrolling ? 'fixed top-0 left-0 right-0' : ''}`}>
             <div className={`flex justify-between items-center px-6 ${scrolling ? 'py-4' : 'py-6'} ease-in duration-500`}>
                 <div>
                     <Link to={"/"}>
@@ -60,7 +60,7 @@ const Navbar = () => {
                 </div>
                 <div className="md:hidden">
                     <button
-                        className="text-2xl text-amber-950 outline outline-offset-0.5 outline-1 outline-yellow-400 p-3 rounded-full hover:outline-white hover:bg-yellow-400 ease-out duration-300"
+                        className="text-2xl text-amber outline outline-offset-0.5 outline-1 outline-yellow p-3 rounded-full hover:outline-white hover:bg-yellow ease-out duration-300"
                         onClick={() => setNavOpen(!navOpen)}
                     >
                         <IoMdMenu />
@@ -71,7 +71,7 @@ const Navbar = () => {
                         {navContent.map((item, idx) => (
                             <li
                                 key={idx}
-                                className={`ease-in duration-200 cursor-pointer ${location.pathname === item.path ? 'text-amber-900' : 'text-stone-500 hover:text-black'}`}
+                                className={`ease-in duration-200 cursor-pointer ${location.pathname === item.path ? 'text-amber' : 'text-gray hover:text-black'}`}
                             >
                                 <Link to={item.path}>
                                     {item.title}
@@ -81,14 +81,14 @@ const Navbar = () => {
                     </ul>
                     <Link to={"/cart"}>
                         <button
-                            className="relative p-3 text-2xl text-amber-950 outline outline-yellow-400 outline-2 rounded-full hover:bg-yellow-400 hover:outline-white"
+                            className="relative p-3 text-2xl text-amber outline outline-yellow outline-2 rounded-full hover:bg-yellow hover:outline-white"
                         >
                             <FaShoppingBasket />
-                            <span className="absolute text-xs -top-1 -right-1 bg-amber-900 text-white px-2 py-1 rounded-full">{totalQuantity > 0 ? totalQuantity : 0}</span>
+                            <span className="absolute text-xs -top-1 -right-1 bg-amber text-white px-2 py-1 rounded-full">{totalQuantity > 0 ? totalQuantity : 0}</span>
                         </button>
                     </Link>
                     <button
-                        className="py-3 px-6 bg-yellow-400 text-black hover:outline hover:outline-white hover:outline-1"
+                        className="py-3 px-6 bg-yellow text-black"
                     >
                         Reserve Table
                     </button>
@@ -102,7 +102,7 @@ const Navbar = () => {
                         {navContent.map((item, idx) => (
                             <li
                                 key={idx}
-                                className={`ease-in duration-200 cursor-pointer ${location.pathname === item.path ? 'text-amber-900' : 'text-stone-500 hover:text-black'}`}
+                                className={`ease-in duration-200 cursor-pointer ${location.pathname === item.path ? 'text-amber' : 'text-gray hover:text-black'}`}
                             >
                                 <Link
                                     to={item.path}
@@ -115,14 +115,14 @@ const Navbar = () => {
                     </ul>
                     <Link to={"/cart"} onClick={() => setNavOpen(false)}>
                         <button
-                            className="relative p-3 text-2xl text-amber-950 outline outline-yellow-400 outline-2 rounded-full hover:bg-yellow-400 hover:outline-white"
+                            className="relative p-3 text-2xl text-amber outline outline-yellow outline-2 rounded-full hover:bg-yellow hover:outline-white"
                         >
                             <FaShoppingBasket />
-                            <span className="absolute text-xs -top-1 -right-1 bg-amber-900 text-white px-2 py-1 rounded-full">{totalQuantity > 0 ? totalQuantity : 0}</span>
+                            <span className="absolute text-xs -top-1 -right-1 bg-amber text-white px-2 py-1 rounded-full">{totalQuantity > 0 ? totalQuantity : 0}</span>
                         </button>
                     </Link>
                     <button
-                        className="py-3 px-7 bg-yellow-400 rounded-full text-xl text-black hover:outline hover:outline-white hover:outline-1"
+                        className="py-3 px-7 bg-yellow text-xl text-black"
                     >
                         Reserve Table
                     </button>

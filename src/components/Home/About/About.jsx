@@ -15,19 +15,19 @@ const About = () => {
 
                 <div className="flex gap-4 mt-5 justify-center items-center lg:items-start lg:justify-start">
                     <div className="flex items-center gap-2">
-                        <img src={twentyFourSeven} alt="" className="border-dashed border-2 border-gray-300 w-12 p-1.5 rounded-full" />
-                        <p className="font-righteous text-amber-900">Online Order</p>
+                        <img src={twentyFourSeven} alt="" className="border-dashed border-2 border-gray w-12 p-1.5 rounded-full" />
+                        <p className="font-righteous text-amber">Online Order</p>
                     </div>
                     <div className="flex items-center justify-center gap-2">
-                        <div className="flex items-center justify-center border-dashed border-2 border-gray-300 p-3 rounded-full text-xl">
+                        <div className="flex items-center justify-center border-dashed border-2 border-gray p-3 rounded-full text-xl">
                             <BsCashCoin />
                         </div>
-                        <p className="font-righteous text-amber-900">Cash on Delivery</p>
+                        <p className="font-righteous text-amber">Cash on Delivery</p>
                     </div>
                 </div>
 
                 <Link to={"/about"}>
-                    <button className="mt-10 xl:mt-4 w-full lg:w-auto py-2 px-10 bg-yellow-400 text-xl text-black outline outline-yellow-400 outline-2 hover:outline-white ease-in duration-300">
+                    <button className="mt-10 xl:mt-6 w-full lg:w-auto py-2 px-10 bg-yellow text-xl text-black outline outline-yellow outline-2 hover:outline-white ease-in duration-300">
                         About Us
                     </button>
                 </Link>

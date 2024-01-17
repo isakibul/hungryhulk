@@ -7,7 +7,7 @@ import Reviews from "../components/Home/Reviews/Reviews"
 
 const Home = () => {
     return (
-        <div className="font-rubik bg-stone-100">
+        <div className="font-rubik bg-stone">
             <Hero />
             <PopularDish />
             <About />
