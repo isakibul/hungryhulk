@@ -27,7 +27,7 @@ const About = () => {
                 </div>
 
                 <Link to={"/about"}>
-                    <button className="mt-10 w-full lg:w-auto py-2 px-6 bg-yellow-400 text-xl text-black outline outline-yellow-400 outline-2 hover:outline-white ease-in duration-300">
+                    <button className="mt-10 xl:mt-4 w-full lg:w-auto py-2 px-10 bg-yellow-400 text-xl text-black outline outline-yellow-400 outline-2 hover:outline-white ease-in duration-300">
                         About Us
                     </button>
                 </Link>
