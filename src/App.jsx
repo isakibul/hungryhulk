@@ -1,4 +1,3 @@
-import React from "react";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Layout from "./Layout/Layout";
 import Home from "./pages/Home";
@@ -8,6 +7,7 @@ import Blogs from "./pages/Blogs";
 import BlogDetails from "./pages/BlogDetails";
 import Contact from "./pages/Contact";
 import CartPage from "./pages/CartPage";
+import NotFound from "./pages/NotFound.jsx";
 import ScrollToTop from "react-scroll-to-top";
 import { FaArrowTurnUp } from "react-icons/fa6";
 
@@ -23,7 +23,7 @@ const App = () => {
           <Route path="/blogs/:blogId" element={<BlogDetails />} />
           <Route path="/contact" element={<Contact />} />
           <Route path="/cart" element={<CartPage />} />
-          <Route path="*" element={<h2>404 Not Found</h2>} />
+          <Route path="*" element={<NotFound />} />
         </Routes>
       </Layout>
       <ScrollToTop

@@ -29,7 +29,7 @@ const CartPage = () => {
                         <div className="mt-10 flex justify-center">
                             <img src={data.image} alt={data.title} />
                         </div>
-                        <p className="font-righteous text-center my-10 text-2xl">{data.title}</p>
+                        <p className="font-righteous text-center my-10 text-2xl font-semibold">{data.title}</p>
                         <button
                             className="flex items-center gap-1 p-1 text-3xl font-bold absolute top-1 right-1"
                             onClick={() => dispatch(removeItem(data.id))}
@@ -41,7 +41,7 @@ const CartPage = () => {
                             <button
                                 className="bg-yellow py-2 px-3"
                                 onClick={() => dispatch(decreaseItemQuantity(data.id))}
-                                disabled={data.quantity == 0}
+                                disabled={data.quantity === 0}
                             >
                                 <FaMinus />
                             </button>
