@@ -6,7 +6,7 @@ const Reviews = () => {
         <div className="font-rubik">
             <div className="text-center mx-6 flex flex-col items-center">
                 <p className="text-3xl lg:text-5xl font-righteous font-bold mb-3">What Client Says</p>
-                <p className="mb-10 text-xs md:text-sm xl:text-base md:w-2/4 font-semibold">Explore the diverse culinary delights at HungryHulk through the lens of satisfied patrons. From mouthwatering burgers and sushi to tantalizing vegetarian options, each review captures the essence of a memorable dining experience.</p>
+                <p className="mb-10 text-xs md:text-sm xl:text-base md:w-2/4">Explore the diverse culinary delights at HungryHulk through the lens of satisfied patrons. From mouthwatering burgers and sushi to tantalizing vegetarian options, each review captures the essence of a memorable dining experience.</p>
             </div>
             <Marquee>
                 <div className="flex gap-6 mr-6">

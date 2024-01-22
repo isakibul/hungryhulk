@@ -45,14 +45,6 @@ const popularDish = [
     description: "Lorem ipsum dolor sit sit amet, consectetur adipiscing elit.",
     price: "$8.40",
   },
-  {
-    id: 6,
-    image: dish3,
-    title: "Shawarma",
-    ratings: [1, 2, 3, 4, 5],
-    description: "Lorem ipsum dolor sit sit amet, consectetur adipiscing elit.",
-    price: "$14.80",
-  },
 ];
 
 export default popularDish;

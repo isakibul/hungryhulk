@@ -9,7 +9,7 @@ const MobileApp = () => {
         <div className="mx-2 p-2 md:px-4 lg:px-8 md:mx-8 lg:mx-14 bg-[#fcfae3] flex flex-col gap-5 items-center justify-center lg:flex-row lg:gap-32 rounded-lg lg:rounded-xl">
             <div className="flex flex-col items-center text-center lg:items-start lg:text-start lg:w-2/5">
                 <p className="font-righteous text-3xl md:text-5xl font-semibold">Never Feel Hungry! Download Our Mobile App Enjoy Delicious Foods</p>
-                <p className="text-sm md:text-base my-5 text-gray-800 font-semibold">Make online reservations, read restaurant reviews from diners, and earn points towards free meals, OpenTable is a real-time online reservation.</p>
+                <p className="text-sm md:text-base my-5 text-gray-800">Make online reservations, read restaurant reviews from diners, and earn points towards free meals, OpenTable is a real-time online reservation.</p>
                 <div className="flex items-center justify-center gap-4">
                     <div className="flex gap-1 text-black bg-yellow py-1 px-6 xl:px-8 rounded-full outline outline-yellow outline-1 cursor-pointer hover:outline-white ease-in duration-300">
                         <div className="text-2xl md:text-4xl">

@@ -66,7 +66,7 @@ const PopularDish = () => {
                     {popularDish.map((dish, index) => (
                         <div key={index} className="bg-white mx-2 flex flex-col gap-5 text-center p-5 shadow-sm rounded-sm">
                             <img src={dish.image} alt="dish-image" />
-                            <p className="font-righteous text-4xl">{dish.title}</p>
+                            <p className="font-righteous text-2xl xl:text-3xl">{dish.title}</p>
                             <div className="flex justify-center text-3xl text-yellow">{dish.ratings.map((_rating, idx) =>
                                 <div
                                     key={idx}

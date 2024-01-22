@@ -43,7 +43,7 @@ const blogs = [
   {
     id: 4,
     image: blog4,
-    title: "A Confectionery Adventure Of Stunning Foods",
+    title: "A Confectionery Stunning Adventure Of Stunning Foods",
     subBody:
       "Get ready for a symphony of sweetness that transcends borders! The Sweet Symphony of Desserts invites....",
     body: "Get ready for a symphony of sweetness that transcends borders! The Sweet Symphony of Desserts invites you into a world where sugar, spice, and everything nice come together in a delightful confectionery adventure. From classic French pastries to exotic Asian sweets, our blog is a celebration of the diverse and delectable universe of desserts. Uncover the stories behind iconic treats, learn about the cultural significance of certain sweets, and unlock the secrets to creating mouthwatering desserts in your own kitchen. Whether you're a seasoned pastry enthusiast or a dessert novice, join us on a journey to satisfy your cravings and inspire your next baking masterpiece.",

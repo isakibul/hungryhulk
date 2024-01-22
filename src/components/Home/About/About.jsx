@@ -1,17 +1,20 @@
-import chefs from "../../../assets/images/about/chefs.jpg"
-import twentyFourSeven from "../../../assets/images/about/7-24.svg"
+import aboutVideo from "../../../assets/images/about/about-video.mp4"
+import twentyFourSeven from "../../../assets/images/about/7-24.svg";
 import { BsCashCoin } from "react-icons/bs";
 import { Link } from "react-router-dom";
 
 const About = () => {
     return (
-        <div className="my-20 px-6 lg:px-12 lg:flex items-center justify-center lg:gap-2">
-            <div className="xl:-ml-10">
-                <img src={chefs} alt="chef" className="scale:50 md:scale-100 lg:scale-75 rounded-lg" />
+        <div className="my-32 px-6 lg:px-12 lg:flex gap-10 items-center justify-center">
+            <div>
+                <video autoPlay loop muted className="rounded-sm opacity-80">
+                    <source src={aboutVideo} type="video/mp4" className="w-2/5" />
+                    Your browser does not support the video tag.
+                </video>
             </div>
-            <div className="text-center lg:text-start lg:w-2/4">
-                <p className="font-righteous text-2xl md:text-3xl lg:text-5xl font-bold my-5">We Are More Than Multiple Service</p>
-                <p className="text-xs lg:text-base text-gray-800 text-justify font-semibold">Welcome to a distinctive establishment where culinary delights intertwine with an array of beverages, complemented by an assortment of delectable baked goods and savory snacks. This unique dining experience transcends the ordinary, drawing inspiration from the rich French culinary heritage, as the term itself originates from the elegant French word synonymous with the art of nourishment.</p>
+            <div className="text-center lg:text-start lg:w-3/4">
+                <p className="font-righteous text-2xl lg:text-4xl xl:text-5xl font-bold my-5">We Are More Than Multiple Service</p>
+                <p className="text-xs lg:text-sm text-gray-800">Welcome to a distinctive establishment where culinary delights intertwine with an array of beverages, complemented by an assortment of delectable baked goods and savory snacks. This unique dining experience transcends the ordinary, drawing inspiration from the rich French culinary heritage, as the term itself originates from the elegant French word synonymous with the art of nourishment.</p>
 
                 <div className="flex gap-4 mt-5 justify-center items-center lg:items-start lg:justify-start">
                     <div className="flex items-center gap-2">
@@ -36,4 +39,4 @@ const About = () => {
     )
 }
 
-export default About
+export default About;

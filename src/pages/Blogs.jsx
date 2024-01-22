@@ -7,13 +7,13 @@ const Blogs = () => {
         <div className="bg-stone font-rubik py-20 px-6 md:px-32 lg:px-40 xl:px-72 font-poppins">
             <div className="text-center mb-10">
                 <p className="font-righteous text-2xl md:text-4xl font-bold">All About Foods</p>
-                <p className="my-2 text-gray-700 font-semibold">
+                <p className="my-2 text-gray-700">
                     Food is any substance consumed to provide nutritional support for an organism.
                 </p>
             </div>
             <div className="grid grid-cols-1 lg:grid-cols-2">
                 {blogs.map((blog) => (
-                    <div className="bg-white mb-20 lg:m-6 font-semibold" key={blog.id}>
+                    <div className="bg-white mb-20 lg:m-6" key={blog.id}>
                         <img src={blog.image} alt="" />
                         <div className="px-1 pb-2">
                             <p className="my-2 font-semibold text-xl">{blog.title}</p>

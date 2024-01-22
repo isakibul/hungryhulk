@@ -1,4 +1,4 @@
-import { useEffect } from "react";
+import React, { useEffect } from "react";
 import { useSelector, useDispatch } from "react-redux";
 import {
     getCartTotal,
@@ -7,8 +7,7 @@ import {
     increaseItemQuantity,
 } from "../store/cartSlice";
 import { IoClose } from "react-icons/io5";
-import { FaPlus } from "react-icons/fa";
-import { FaMinus } from "react-icons/fa";
+import { FaPlus, FaMinus } from "react-icons/fa";
 
 const CartPage = () => {
     const { cart, totalQuantity, totalPrice } = useSelector(
@@ -22,57 +21,73 @@ const CartPage = () => {
     }, [cart]);
 
     return (
-        <div className="bg-stone font-rubik py-20 px-6">
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
-                {cart?.map((data) => (
-                    <div key={data.id} className="bg-white p-2 relative">
-                        <div className="mt-10 flex justify-center">
-                            <img src={data.image} alt={data.title} />
-                        </div>
-                        <p className="font-righteous text-center my-10 text-2xl font-semibold">{data.title}</p>
-                        <button
-                            className="flex items-center gap-1 p-1 text-3xl font-bold absolute top-1 right-1"
-                            onClick={() => dispatch(removeItem(data.id))}
-                        >
-                            <IoClose />
-                        </button>
+        <div className="bg-stone font-rubik py-20 px-2 md:px-32 lg:px-40 xl:px-72">
+            <table className="w-full bg-white shadow-lg">
+                <thead>
+                    <tr className="bg-gray-100">
+                        <th className="py-3 px-1 md:px-6 text-left">Product</th>
+                        <th className="py-3 px-1 md:px-6 text-left">Quantity</th>
+                        <th className="py-3 px-1 md:px-6 text-left">Price</th>
+                        <th className="py-3 px-1 md:px-6 text-center">Actions</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {cart?.map((data) => (
+                        <tr key={data.id} className="border-t border-gray">
+                            <td className="py-4 px-1 md:px-6">
+                                <div className="flex items-center">
+                                    <img
+                                        src={data.image}
+                                        alt={data.title}
+                                        className="hidden md:block w-10 h-10 object-cover rounded-full mr-4"
+                                    />
+                                    <div>
+                                        <p className="text-sm font-semibold">{data.title}</p>
+                                    </div>
+                                </div>
+                            </td>
+                            <td className="py-4 px-1 md:px-6">
+                                <div className="flex items-center md:gap-3">
+                                    <button
+                                        className="bg-yellow py-1 px-1 md:px-2 rounded-sm mr-1"
+                                        onClick={() => dispatch(decreaseItemQuantity(data.id))}
+                                        disabled={data.quantity === 0}
+                                    >
+                                        <FaMinus />
+                                    </button>
+                                    <span className="text-lg font-bold">{data.quantity}</span>
+                                    <button
+                                        className="bg-yellow py-1 px-1 md:px-2 rounded-sm ml-1"
+                                        onClick={() => dispatch(increaseItemQuantity(data.id))}
+                                    >
+                                        <FaPlus />
+                                    </button>
+                                </div>
+                            </td>
+                            <td className="py-4 px-2 md:px-6 text-sm md:text-lg font-bold">
+                                ${data.price}
+                            </td>
+                            <td className="py-4 px-2 md:px-6 text-center">
+                                <button
+                                    className="text-red-500 hover:text-red-700"
+                                    onClick={() => dispatch(removeItem(data.id))}
+                                >
+                                    <IoClose />
+                                </button>
+                            </td>
+                        </tr>
+                    ))}
+                </tbody>
+            </table>
 
-                        <div className="flex justify-between my-5">
-                            <button
-                                className="bg-yellow py-2 px-3"
-                                onClick={() => dispatch(decreaseItemQuantity(data.id))}
-                                disabled={data.quantity === 0}
-                            >
-                                <FaMinus />
-                            </button>
-
-                            <span className="text-3xl font-bold">{data.quantity}</span>
-
-                            <button
-                                className="bg-yellow py-2 px-3"
-                                onClick={() => dispatch(increaseItemQuantity(data.id))}
-                            >
-                                <FaPlus />
-                            </button>
-                        </div>
-
-
-                        <p className="text-2xl">
-                            <strong>{data.price}</strong>
-                        </p>
-                    </div>
-                ))}
-            </div>
-
-            <div className="bg-white p-3 mt-20 w-68 md:w-96">
-                <h2 className="font-righteous text-2xl mb-5 font-semibold">Order Summary</h2>
+            <div className="bg-white p-6 mt-10 shadow-lg">
+                <h2 className="text-2xl mb-5 font-semibold">Order Summary</h2>
                 <ul className="font-semibold">
-                    <li className="flex gap-5">
+                    <li className="flex justify-between py-2">
                         <span>Total Quantity:</span>
                         <span>{totalQuantity}</span>
                     </li>
-
-                    <li className="flex gap-7">
+                    <li className="flex justify-between py-2">
                         <span>Total amount:</span>
                         <span>${totalPrice}</span>
                     </li>
