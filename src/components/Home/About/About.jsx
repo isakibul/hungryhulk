@@ -15,7 +15,6 @@ const About = () => {
             <div className="text-center lg:text-start lg:w-3/4">
                 <p className="font-righteous text-2xl lg:text-4xl xl:text-5xl font-bold my-5">We Are More Than Multiple Service</p>
                 <p className="text-xs lg:text-sm text-gray-800">Welcome to a distinctive establishment where culinary delights intertwine with an array of beverages, complemented by an assortment of delectable baked goods and savory snacks. This unique dining experience transcends the ordinary, drawing inspiration from the rich French culinary heritage, as the term itself originates from the elegant French word synonymous with the art of nourishment.</p>
-
                 <div className="flex gap-4 mt-5 justify-center items-center lg:items-start lg:justify-start">
                     <div className="flex items-center gap-2">
                         <img src={twentyFourSeven} alt="" className="border-dashed border-2 border-gray w-12 p-1.5 rounded-full" />
