@@ -1,41 +1,43 @@
-import aboutVideo from "../../../assets/images/about/about-video.mp4"
-import twentyFourSeven from "../../../assets/images/about/7-24.svg";
-import { BsCashCoin } from "react-icons/bs";
+import React from "react";
 import { Link } from "react-router-dom";
+import { BsCashCoin } from "react-icons/bs";
+import aboutVideo from "../../../assets/images/about/about-video.mp4";
+import { IoFastFoodOutline } from "react-icons/io5";
 
 const About = () => {
     return (
-        <div className="my-32 px-6 lg:px-12 lg:flex gap-10 items-center justify-center">
-            <div>
-                <video autoPlay loop muted className="rounded-sm opacity-80">
-                    <source src={aboutVideo} type="video/mp4" className="w-2/5" />
-                    Your browser does not support the video tag.
-                </video>
-            </div>
-            <div className="text-center lg:text-start lg:w-3/4">
-                <p className="font-righteous text-2xl lg:text-4xl xl:text-5xl font-bold my-5">We Are More Than Multiple Service</p>
-                <p className="text-xs lg:text-sm text-gray-800">Welcome to a distinctive establishment where culinary delights intertwine with an array of beverages, complemented by an assortment of delectable baked goods and savory snacks. This unique dining experience transcends the ordinary, drawing inspiration from the rich French culinary heritage, as the term itself originates from the elegant French word synonymous with the art of nourishment.</p>
-                <div className="flex gap-4 mt-5 justify-center items-center lg:items-start lg:justify-start">
-                    <div className="flex items-center gap-2">
-                        <img src={twentyFourSeven} alt="" className="border-dashed border-2 border-gray w-12 p-1.5 rounded-full" />
-                        <p className="font-righteous text-amber">Online Order</p>
-                    </div>
-                    <div className="flex items-center justify-center gap-2">
-                        <div className="flex items-center justify-center border-dashed border-2 border-gray p-3 rounded-full text-xl">
-                            <BsCashCoin />
-                        </div>
-                        <p className="font-righteous text-amber">Cash on Delivery</p>
-                    </div>
-                </div>
+        <div className="relative h-screen my-28">
+            <video src={aboutVideo} autoPlay loop muted className="object-cover w-full h-full absolute top-0 left-0" />
 
-                <Link to={"/about"}>
-                    <button className="mt-10 xl:mt-6 w-full lg:w-auto py-2 px-10 bg-yellow text-xl text-black outline outline-yellow outline-2 hover:outline-white ease-in duration-300">
-                        About Us
-                    </button>
-                </Link>
+            <div className="absolute inset-0 flex flex-col items-center justify-center text-white text-center backdrop-blur-[4px]">
+                <div className="flex flex-col items-center justify-center w-4/5 md:w-3/5 p-8 bg-black bg-opacity-50 rounded-md">
+                    <p className="font-righteous text-base md:text-4xl lg:text-5xl font-bold my-5">Here We Are More Than <br /> Many Service</p>
+                    <p className="text-xs lg:text-base text-gray-800">Welcome to a distinctive establishment where culinary delights intertwine with an array of beverages, complemented by an assortment of delectable baked goods and savory snacks. This unique dining experience transcends the ordinary, drawing inspiration from the rich French culinary heritage, as the term itself originates from the elegant French word synonymous with the art of nourishment.</p>
+
+                    <div className="hidden md:flex gap-4 mt-5 justify-center items-center lg:items-start lg:justify-start">
+                        <div className="flex items-center justify-center gap-2">
+                            <div className="flex items-center justify-center border-2 border-white p-3 rounded-full text-xl">
+                                <IoFastFoodOutline />
+                            </div>
+                            <p className="font-righteous text-white">Online Order</p>
+                        </div>
+                        <div className="flex items-center justify-center gap-2">
+                            <div className="flex items-center justify-center border-2 border-white p-3 rounded-full text-xl">
+                                <BsCashCoin />
+                            </div>
+                            <p className="font-righteous text-white">Cash on Delivery</p>
+                        </div>
+                    </div>
+
+                    <Link to={"/about"}>
+                        <button className="py-3 mt-5 px-10 md:px-20 text-sm md:text-base bg-yellow text-black rounded-sm hover:bg-transparent hover:text-gray transition duration-300 ease-in">
+                            About Us
+                        </button>
+                    </Link>
+                </div>
             </div>
         </div>
-    )
-}
+    );
+};
 
 export default About;
