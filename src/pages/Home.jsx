@@ -1,5 +1,5 @@
 import Hero from "../components/Home/Hero/Hero"
-import PopularDish from "../components/Home/PopularDish/PopularDish";
+import PopularMenu from "../components/Home/PopularMenu/PopularMenu";
 import About from "../components/Home/About/About"
 import MobileApp from "../components/Home/MobileApp/MobileApp"
 import Reservation from "../components/Home/Reservation/Reservation"
@@ -9,7 +9,7 @@ const Home = () => {
     return (
         <div className="font-rubik bg-stone">
             <Hero />
-            <PopularDish />
+            <PopularMenu />
             <About />
             <Reviews />
             <Reservation />

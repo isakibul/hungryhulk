@@ -1,9 +1,9 @@
-import React, { useRef } from "react";
+import { useEffect, useRef, useState } from "react";
 import Carousel from "react-multi-carousel";
 import "react-multi-carousel/lib/styles.css";
-import popularDish from "./popularDishes";
 import { IoIosArrowRoundBack, IoIosArrowRoundForward } from "react-icons/io";
 import { MdStarRate } from "react-icons/md";
+import axios from "axios";
 
 const responsive = {
     superLargeDesktop: {
@@ -24,7 +24,23 @@ const responsive = {
     },
 };
 
-const PopularDish = () => {
+const PopularMenu = () => {
+    const [popularMenu, setPopularMenu] = useState([]);
+
+    useEffect(() => {
+        const fetchData = async () => {
+            try {
+                const response = await axios.get('https://hungryhulk.onrender.com/api/popularmenulist');
+                setPopularMenu(response.data.data);
+            } catch (error) {
+                console.error('Error fetching data:', error);
+            }
+        };
+        fetchData();
+    }, []);
+
+    console.log(popularMenu);
+
     const carouselRef = useRef(null);
 
     const handlePreviousClick = () => {
@@ -42,7 +58,7 @@ const PopularDish = () => {
     return (
         <div className="mt-20">
             <div className="flex justify-between mb-10 px-6">
-                <p className="font-righteous text-2xl md:text-5xl font-bold">Popular Dishes</p>
+                <p className="font-righteous text-2xl md:text-5xl font-bold">Popular Menu</p>
                 <div className="flex gap-4 items-center lg:mr-10">
                     {/* left arrow */}
                     <button
@@ -63,16 +79,16 @@ const PopularDish = () => {
 
             <div className="ml-1">
                 <Carousel ref={carouselRef} arrows={false} responsive={responsive} itemClass="carousel-item">
-                    {popularDish.map((dish, index) => (
+                    {popularMenu.map((menu, index) => (
                         <div key={index} className="bg-white mx-2 flex flex-col gap-5 text-center p-5 shadow-sm rounded-sm">
-                            <img src={dish.image} alt="dish-image" />
-                            <p className="font-righteous text-2xl xl:text-3xl">{dish.title}</p>
-                            <div className="flex justify-center text-3xl text-yellow">{dish.ratings.map((_rating, idx) =>
-                                <div
-                                    key={idx}
-                                >
-                                    <MdStarRate />
-                                </div>)}
+                            <img src={menu.imageUrl} alt="menu-image" />
+                            <p className="font-righteous text-2xl xl:text-3xl">{menu.title}</p>
+                            <div className="flex justify-center text-3xl text-yellow">
+                                {Array.from({ length: menu.ratings }, (_, idx) => (
+                                    <div key={idx}>
+                                        <MdStarRate />
+                                    </div>
+                                ))}
                             </div>
                         </div>
                     ))}
@@ -82,4 +98,4 @@ const PopularDish = () => {
     );
 };
 
-export default PopularDish;
+export default PopularMenu;
