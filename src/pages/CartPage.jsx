@@ -70,7 +70,7 @@ const CartPage = () => {
                             <td className="py-4 px-2 md:px-6 text-center">
                                 <button
                                     className="text-red-500 hover:text-red-700"
-                                    onClick={() => dispatch(removeItem(menu.id))}
+                                    onClick={() => dispatch(removeItem(menu._id))}
                                 >
                                     <IoClose />
                                 </button>
