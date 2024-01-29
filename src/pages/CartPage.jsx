@@ -32,17 +32,17 @@ const CartPage = () => {
                     </tr>
                 </thead>
                 <tbody>
-                    {cart?.map((data) => (
-                        <tr key={data.id} className="border-t border-gray">
+                    {cart?.map((menu) => (
+                        <tr key={menu._id} className="border-t border-gray">
                             <td className="py-4 px-1 md:px-6">
                                 <div className="flex items-center">
                                     <img
-                                        src={data.image}
-                                        alt={data.title}
+                                        src={menu.imageUrl}
+                                        alt={menu.title}
                                         className="hidden md:block w-10 h-10 object-cover rounded-full mr-4"
                                     />
                                     <div>
-                                        <p className="text-sm font-semibold">{data.title}</p>
+                                        <p className="text-sm font-semibold">{menu.title}</p>
                                     </div>
                                 </div>
                             </td>
@@ -50,27 +50,27 @@ const CartPage = () => {
                                 <div className="flex items-center md:gap-3">
                                     <button
                                         className="bg-yellow py-1 px-1 md:px-2 rounded-sm mr-1"
-                                        onClick={() => dispatch(decreaseItemQuantity(data.id))}
-                                        disabled={data.quantity === 0}
+                                        onClick={() => dispatch(decreaseItemQuantity(menu.id))}
+                                        disabled={menu.quantity === 0}
                                     >
                                         <FaMinus />
                                     </button>
-                                    <span className="text-lg font-bold">{data.quantity}</span>
+                                    <span className="text-lg font-bold">{menu.quantity}</span>
                                     <button
                                         className="bg-yellow py-1 px-1 md:px-2 rounded-sm ml-1"
-                                        onClick={() => dispatch(increaseItemQuantity(data.id))}
+                                        onClick={() => dispatch(increaseItemQuantity(menu.id))}
                                     >
                                         <FaPlus />
                                     </button>
                                 </div>
                             </td>
                             <td className="py-4 px-2 md:px-6 text-sm md:text-lg font-bold">
-                                ${data.price}
+                                ${menu.price}
                             </td>
                             <td className="py-4 px-2 md:px-6 text-center">
                                 <button
                                     className="text-red-500 hover:text-red-700"
-                                    onClick={() => dispatch(removeItem(data.id))}
+                                    onClick={() => dispatch(removeItem(menu.id))}
                                 >
                                     <IoClose />
                                 </button>

@@ -1,9 +1,9 @@
-import { useEffect, useRef, useState } from "react";
+import { useRef } from "react";
 import Carousel from "react-multi-carousel";
 import "react-multi-carousel/lib/styles.css";
 import { IoIosArrowRoundBack, IoIosArrowRoundForward } from "react-icons/io";
 import { MdStarRate } from "react-icons/md";
-import axios from "axios";
+import usePopularMenu from "../../../hooks/usePopularMenu";
 
 const responsive = {
     superLargeDesktop: {
@@ -25,21 +25,7 @@ const responsive = {
 };
 
 const PopularMenu = () => {
-    const [popularMenu, setPopularMenu] = useState([]);
-
-    useEffect(() => {
-        const fetchData = async () => {
-            try {
-                const response = await axios.get('https://hungryhulk.onrender.com/api/popularmenulist');
-                setPopularMenu(response.data.data);
-            } catch (error) {
-                console.error('Error fetching data:', error);
-            }
-        };
-        fetchData();
-    }, []);
-
-    console.log(popularMenu);
+    const popularMenu = usePopularMenu();
 
     const carouselRef = useRef(null);
 

@@ -12,7 +12,7 @@ const Tags = [
     title: "Breakfast",
   },
   {
-    title: "Launch",
+    title: "Lunch",
   },
   {
     title: "Dinner",
