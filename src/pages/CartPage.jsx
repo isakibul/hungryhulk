@@ -50,7 +50,7 @@ const CartPage = () => {
                                 <div className="flex items-center md:gap-3">
                                     <button
                                         className="bg-yellow py-1 px-1 md:px-2 rounded-sm mr-1"
-                                        onClick={() => dispatch(decreaseItemQuantity(menu.id))}
+                                        onClick={() => dispatch(decreaseItemQuantity(menu._id))}
                                         disabled={menu.quantity === 0}
                                     >
                                         <FaMinus />
@@ -58,7 +58,7 @@ const CartPage = () => {
                                     <span className="text-lg font-bold">{menu.quantity}</span>
                                     <button
                                         className="bg-yellow py-1 px-1 md:px-2 rounded-sm ml-1"
-                                        onClick={() => dispatch(increaseItemQuantity(menu.id))}
+                                        onClick={() => dispatch(increaseItemQuantity(menu._id))}
                                     >
                                         <FaPlus />
                                     </button>

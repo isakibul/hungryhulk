@@ -9,7 +9,7 @@ import "react-toastify/dist/ReactToastify.css";
 import useMenu from "../hooks/useMenu";
 
 const Menu = () => {
-    const MenuItems = useMenu();
+    const menuItems = useMenu();
     const dispatch = useDispatch();
 
     const [selectedCategory, setSelectedCategory] = useState("All");
@@ -20,8 +20,8 @@ const Menu = () => {
 
     const filteredMenuItems =
         selectedCategory === "All"
-            ? MenuItems
-            : MenuItems.filter((item) => item.category === selectedCategory);
+            ? menuItems
+            : menuItems.filter((item) => item.category === selectedCategory);
 
     const toastStyle = {
         position: "top-right",
