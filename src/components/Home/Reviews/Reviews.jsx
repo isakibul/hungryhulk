@@ -33,7 +33,7 @@ const Reviews = () => {
                         ))}
                     </div>
                 </Marquee>) : (
-                    <Skeleton width="100%" className="h-[375px] lg:h-[420px]" />
+                    <Skeleton width="100%" count={10} height={"20px"} />
                 )}
             </div>
         </div>

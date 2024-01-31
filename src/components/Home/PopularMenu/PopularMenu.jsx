@@ -69,7 +69,7 @@ const PopularMenu = () => {
                 {popularMenu.length !== 0 ? (
                     <Carousel ref={carouselRef} arrows={false} responsive={responsive} itemClass="carousel-item">
                         {popularMenu.map((menu, index) => (
-                            <div key={index} className="bg-white h-[300px] mx-2 flex flex-col gap-5 text-center py-5 shadow-sm rounded-sm">
+                            <div key={index} className="bg-white mx-2 flex flex-col gap-5 text-center py-5 shadow-sm rounded-sm">
                                 <img src={menu.imageUrl} alt="menu-image" />
                                 <p className="font-righteous text-2xl xl:text-3xl">{menu.title}</p>
                                 <div className="flex justify-center text-3xl text-yellow">
@@ -83,8 +83,7 @@ const PopularMenu = () => {
                         ))}
                     </Carousel>
                 ) : (
-                    <Skeleton width="100%" height={"300px"}
-                    />
+                    <Skeleton width="100%" count={10} height={"20px"} />
                 )}
             </div>
         </div>
