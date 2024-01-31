@@ -1,9 +1,11 @@
-import { useRef } from "react";
+import { useEffect, useRef, useState } from "react";
 import Carousel from "react-multi-carousel";
 import "react-multi-carousel/lib/styles.css";
 import { IoIosArrowRoundBack, IoIosArrowRoundForward } from "react-icons/io";
 import { MdStarRate } from "react-icons/md";
 import usePopularMenu from "../../../hooks/usePopularMenu";
+import Skeleton from 'react-loading-skeleton'
+import 'react-loading-skeleton/dist/skeleton.css'
 
 const responsive = {
     superLargeDesktop: {
@@ -19,7 +21,7 @@ const responsive = {
         items: 2,
     },
     mobile: {
-        breakpoint: { max: 464, min: 0 },
+        breakpoint: { max: 666, min: 0 },
         items: 1,
     },
 };
@@ -64,21 +66,26 @@ const PopularMenu = () => {
             </div>
 
             <div className="ml-1">
-                <Carousel ref={carouselRef} arrows={false} responsive={responsive} itemClass="carousel-item">
-                    {popularMenu.map((menu, index) => (
-                        <div key={index} className="bg-white mx-2 flex flex-col gap-5 text-center p-5 shadow-sm rounded-sm">
-                            <img src={menu.imageUrl} alt="menu-image" />
-                            <p className="font-righteous text-2xl xl:text-3xl">{menu.title}</p>
-                            <div className="flex justify-center text-3xl text-yellow">
-                                {Array.from({ length: menu.ratings }, (_, idx) => (
-                                    <div key={idx}>
-                                        <MdStarRate />
-                                    </div>
-                                ))}
+                {popularMenu.length !== 0 ? (
+                    <Carousel ref={carouselRef} arrows={false} responsive={responsive} itemClass="carousel-item">
+                        {popularMenu.map((menu, index) => (
+                            <div key={index} className="bg-white h-[300px] mx-2 flex flex-col gap-5 text-center py-5 shadow-sm rounded-sm">
+                                <img src={menu.imageUrl} alt="menu-image" />
+                                <p className="font-righteous text-2xl xl:text-3xl">{menu.title}</p>
+                                <div className="flex justify-center text-3xl text-yellow">
+                                    {Array.from({ length: menu.ratings }, (_, idx) => (
+                                        <div key={idx}>
+                                            <MdStarRate />
+                                        </div>
+                                    ))}
+                                </div>
                             </div>
-                        </div>
-                    ))}
-                </Carousel>
+                        ))}
+                    </Carousel>
+                ) : (
+                    <Skeleton width="100%" height={"300px"}
+                    />
+                )}
             </div>
         </div>
     );
