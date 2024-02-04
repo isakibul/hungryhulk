@@ -1,7 +1,8 @@
 import { useParams } from 'react-router-dom';
-import blogs from '../assets/data/blogs/blogData';
+import useBlog from '../hooks/useBlog';
 
 const BlogDetails = () => {
+    const blogs = useBlog();
     const { blogId } = useParams();
     const blog = blogs.find((blog) => blog.id === parseInt(blogId));
 
@@ -14,9 +15,7 @@ const BlogDetails = () => {
             <img src={blog.image} alt={blog.title} />
             <p className='text-2xl md:text-4xl font-bold font-righteous my-5'>{blog.title}</p>
             <div className='mt-10 text-justify flex flex-col gap-5'>
-                <p>{blog.body}</p>
-                <p>{blog.body2}</p>
-                <p>{blog.body3}</p>
+                <p>{blog.description}</p>
             </div>
         </div>
     );
