@@ -1,7 +1,7 @@
 import { Link } from 'react-router-dom';
-// import blogs from '../assets/data/blogs/blogData';
 import { FaArrowRightLong } from 'react-icons/fa6';
 import useBlog from '../hooks/useBlog';
+import { Circles } from 'react-loader-spinner';
 
 const Blogs = () => {
     const blogs = useBlog();
@@ -13,22 +13,36 @@ const Blogs = () => {
                     Food is any substance consumed to provide nutritional support for an organism.
                 </p>
             </div>
-            <div className="grid grid-cols-1 lg:grid-cols-2">
-                {blogs.map((blog) => (
-                    <div className="bg-white mb-20 lg:m-6" key={blog._id}>
-                        <img src={blog.blogImageUrl} alt="" />
-                        <div className="px-2 pb-2">
-                            <p className="my-2 font-semibold text-xl">{blog.title}</p>
-                            <p className="text-sm mb-3">{blog.subDescription}</p>
-                            <Link to={`/blogs/${blog._id}`}>
-                                <button className="flex items-center gap-2 py-2 px-5 rounded-sm bg-yellow">
-                                    Read More <FaArrowRightLong />
-                                </button>
-                            </Link>
+            {blogs.length !== 0 ? (
+                <div className="grid grid-cols-1 lg:grid-cols-2">
+                    {blogs.map((blog) => (
+                        <div className="bg-white mb-20 lg:m-6" key={blog._id}>
+                            <img src={blog.blogImageUrl} alt="" />
+                            <div className="px-2 pb-2">
+                                <p className="my-2 font-semibold text-xl">{blog.title}</p>
+                                <p className="text-sm mb-3">{blog.subDescription}</p>
+                                <Link to={`/blogs/${blog._id}`}>
+                                    <button className="flex items-center gap-2 py-2 px-5 rounded-sm bg-yellow">
+                                        Read More <FaArrowRightLong />
+                                    </button>
+                                </Link>
+                            </div>
                         </div>
-                    </div>
-                ))}
-            </div>
+                    ))}
+                </div>
+            ) : (
+                <div className="flex items-center justify-center py-20">
+                    <Circles
+                        height="100"
+                        width="100"
+                        color="#facc15"
+                        ariaLabel="circles-loading"
+                        wrapperStyle={{}}
+                        wrapperClass=""
+                        visible={true}
+                    />
+                </div>
+            )}
         </div>
     );
 };

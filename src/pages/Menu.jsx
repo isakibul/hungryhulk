@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { MdStarRate } from "react-icons/md";
 import Tags from "../assets/data/menu/menuTags";
 import { useDispatch } from "react-redux";
@@ -38,6 +38,10 @@ const Menu = () => {
         toast.success(`${dish.title} added to Cart!`, {
             ...toastStyle,
         });
+
+        setTimeout(() => {
+            window.location.reload();
+        }, 3000)
     };
 
     return (

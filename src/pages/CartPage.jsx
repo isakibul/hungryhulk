@@ -20,6 +20,11 @@ const CartPage = () => {
         dispatch(getCartTotal());
     }, [cart]);
 
+    const handleRemove = (id) => {
+        dispatch(removeItem(id))
+        window.location.reload();
+    }
+
     return (
         <div className="bg-stone font-rubik py-20 px-2 md:px-32 lg:px-40 xl:px-72">
             <table className="w-full bg-white shadow-lg">
@@ -70,7 +75,7 @@ const CartPage = () => {
                             <td className="py-4 px-2 md:px-6 text-center">
                                 <button
                                     className="text-red-500 hover:text-red-700"
-                                    onClick={() => dispatch(removeItem(menu._id))}
+                                    onClick={() => handleRemove(menu._id)}
                                 >
                                     <IoClose />
                                 </button>

@@ -5,13 +5,22 @@ import navContent from "./NavbarContext";
 import { FaShoppingBasket } from "react-icons/fa";
 import { IoMdMenu } from "react-icons/io";
 import { IoClose } from "react-icons/io5";
-import { useSelector } from 'react-redux';
 
 const Navbar = () => {
     const [scrolling, setScrolling] = useState(false);
     const [navOpen, setNavOpen] = useState(false);
     const location = useLocation();
-    const { totalQuantity } = useSelector((state) => state.allCart);
+
+    function getCartTotalQuantity() {
+        const storedCart = localStorage.getItem("cart");
+        const cart = storedCart ? JSON.parse(storedCart) : [];
+
+        return cart.reduce((totalQuantity, cartItem) => {
+            return totalQuantity + cartItem.quantity;
+        }, 0);
+    }
+
+    const totalQuantity = getCartTotalQuantity();
 
     useEffect(() => {
         const handleScroll = () => {
