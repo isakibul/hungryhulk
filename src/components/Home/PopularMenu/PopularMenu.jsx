@@ -84,9 +84,9 @@ const PopularMenu = () => {
                     </Carousel>
                 ) : (
                     <div className="mx-2">
-                        <Skeleton width="100%" height={"180px"} />
-                        <Skeleton width="100%" height={"60px"} />
-                        <Skeleton width="100%" height={"60px"} />
+                        <Skeleton width="100%" height={"160px"} />
+                        <Skeleton width="100%" height={"50px"} />
+                        <Skeleton width="100%" height={"50px"} />
                     </div>
                 )}
             </div>
