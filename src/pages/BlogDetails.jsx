@@ -1,5 +1,6 @@
 import { useParams } from 'react-router-dom';
 import useBlog from '../hooks/useBlog';
+import { Circles } from 'react-loader-spinner';
 
 const BlogDetails = () => {
     const blogs = useBlog();
@@ -7,7 +8,15 @@ const BlogDetails = () => {
     const blog = blogs.find((blog) => blog._id === blogId);
 
     if (!blog) {
-        return <p>Blog not found</p>;
+        return <div className="bg-stone flex items-center justify-center py-40">
+            <Circles
+                height="100"
+                width="100"
+                color="#facc15"
+                ariaLabel="circles-loading"
+                visible={true}
+            />
+        </div>;
     }
 
     return (

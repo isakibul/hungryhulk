@@ -25,6 +25,16 @@ const CartPage = () => {
         window.location.reload();
     }
 
+    const handleDecrement = (id) => {
+        dispatch(decreaseItemQuantity(id))
+        window.location.reload();
+    }
+
+    const handleIncrement = (id) => {
+        dispatch(increaseItemQuantity(id))
+        window.location.reload();
+    }
+
     return (
         <div className="bg-stone font-rubik py-20 px-2 md:px-32 lg:px-40 xl:px-72">
             <table className="w-full bg-white shadow-lg">
@@ -55,7 +65,7 @@ const CartPage = () => {
                                 <div className="flex items-center md:gap-3">
                                     <button
                                         className="bg-yellow py-1 px-1 md:px-2 rounded-sm mr-1"
-                                        onClick={() => dispatch(decreaseItemQuantity(menu._id))}
+                                        onClick={() => handleDecrement(menu._id)}
                                         disabled={menu.quantity === 0}
                                     >
                                         <FaMinus />
@@ -63,7 +73,7 @@ const CartPage = () => {
                                     <span className="text-lg font-bold">{menu.quantity}</span>
                                     <button
                                         className="bg-yellow py-1 px-1 md:px-2 rounded-sm ml-1"
-                                        onClick={() => dispatch(increaseItemQuantity(menu._id))}
+                                        onClick={() => handleIncrement(menu._id)}
                                     >
                                         <FaPlus />
                                     </button>
@@ -101,7 +111,7 @@ const CartPage = () => {
                     Go to Checkout
                 </button>
             </div>
-        </div>
+        </div >
     );
 };
 

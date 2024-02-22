@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import { MdStarRate } from "react-icons/md";
 import Tags from "../assets/data/menu/menuTags";
 import { useDispatch } from "react-redux";
@@ -45,7 +45,7 @@ const Menu = () => {
     };
 
     return (
-        <div className="px-4 pt-2 bg-stone font-rubik">
+        <div className="px-4 pt-10 bg-stone font-rubik">
             <ToastContainer />
 
             <p className="font-righteous text-3xl md:text-4xl lg:text-5xl xl-text-7xl font-bold text-center">
@@ -104,8 +104,6 @@ const Menu = () => {
                         width="100"
                         color="#facc15"
                         ariaLabel="circles-loading"
-                        wrapperStyle={{}}
-                        wrapperClass=""
                         visible={true}
                     />
                 </div>

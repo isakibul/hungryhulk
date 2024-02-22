@@ -10,7 +10,7 @@ import CartPage from "./pages/CartPage";
 import NotFound from "./pages/NotFound.jsx";
 import ScrollToTop from "react-scroll-to-top";
 import { FaArrowTurnUp } from "react-icons/fa6";
-import ScrollToTopInRouting from "../utils/ScrollToTopInRouting.js"
+import ScrollToTopInRouting from "./utils/ScrollToTopInRouting.js"
 
 const App = () => {
   return (
