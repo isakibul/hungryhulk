@@ -41,6 +41,7 @@ const Reviews = () => {
                         <Skeleton width="100%" height={"20px"} />
                         <Skeleton width="100%" height={"20px"} />
                         <Skeleton width="100%" height={"20px"} />
+                        <Skeleton width="100%" height={"20px"} />
                     </div>
                 )}
             </div>
