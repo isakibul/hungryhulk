@@ -21,12 +21,16 @@ const BlogDetails = () => {
 
     return (
         <div className='bg-stone font-rubik py-20 px-6 md:px-32 lg:px-40 xl:px-72'>
-            <img src={blog.blogImageUrl} alt={blog.title} />
+            <img src={blog.innerCoverURL} alt={blog.title} />
             <p className='text-2xl md:text-4xl font-bold font-righteous my-5'>{blog.title}</p>
             <div className='mt-10 text-justify flex flex-col gap-5'>
-                <p>{blog.description1}</p>
-                <p>{blog.description2}</p>
-                <p>{blog.description3}</p>
+                <div className='text-sm text-gray'>
+                    <p>{blog.description1}</p>
+                    <br />
+                    <p>{blog.description2}</p>
+                    <br />
+                    <p>{blog.description3}</p>
+                </div>
             </div>
         </div>
     );

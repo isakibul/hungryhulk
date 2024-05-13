@@ -12,7 +12,7 @@ export default {
       white: "#ffffff",
       amber: "#78350f",
       black: "#000000",
-      gray: "#4b5563",
+      gray: "#4b5540",
       stone: "#f5f5f4",
     },
   },

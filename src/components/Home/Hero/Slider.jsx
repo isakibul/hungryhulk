@@ -18,7 +18,7 @@ const Slider = () => {
 
     return (
         <div className="mt-5 bg-cover bg-center bg-no-repeat min-h-full" style={{ backgroundImage: `url(${sliderBg})` }}>
-            <img src={sliderItems[currentItem]} className='p-20' alt="" />
+            <img src={sliderItems[currentItem]} className='p-6 lg:p-20' alt="" />
         </div>
     );
 };

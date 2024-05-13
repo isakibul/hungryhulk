@@ -19,15 +19,16 @@ const Reviews = () => {
                         {reviews.map((review, idx) => (
                             <div
                                 key={idx}
-                                className="text-center w-[250px] md:w-[300px] h-[375px] lg:h-[420px] bg-white rounded-sm"
+                                className="text-center w-[250px] md:w-[300px] lg:h-[380px] bg-white rounded-sm"
                             >
                                 <img
+                                    className="rounded"
                                     src={review.clientImageUrl}
                                     alt="client"
                                 />
                                 <div className="p-5">
                                     <p className="text-xl font-righteous font-bold">{review.name}</p>
-                                    <p className="text-xs lg:text-sm mt-2">{review.review}</p>
+                                    <p className="text-xs mt-2">{review.review}</p>
                                 </div>
                             </div>
                         ))}

@@ -20,9 +20,9 @@ const Hero = () => {
                     </Link>
                 </div>
             </div>
-            <div className="hidden lg:block">
+            <div className="block md:hidden lg:block">
                 <Slider />
-                <img className="ml-auto -mt-24 -mr-6" src={patternsRight} alt="" />
+                <img className="hidden lg:block ml-auto -mt-24 -mr-6" src={patternsRight} alt="" />
             </div>
         </div>
     )
