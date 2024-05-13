@@ -7,14 +7,22 @@ const useBlog = () => {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const response = await axios.get(
-          "https://hungryhulk-server.onrender.com/api/blog"
-        );
-        setBlogs(response.data.data);
+        const cachedData = localStorage.getItem("blogData");
+        if (cachedData) {
+          setBlogs(JSON.parse(cachedData));
+        } else {
+          const response = await axios.get(
+            "https://hungryhulk-server.onrender.com/api/blog"
+          );
+          const responseData = response.data.data;
+          localStorage.setItem("blogData", JSON.stringify(responseData));
+          setBlogs(responseData);
+        }
       } catch (error) {
         console.error("Error fetching data:", error);
       }
     };
+
     fetchData();
   }, []);
 

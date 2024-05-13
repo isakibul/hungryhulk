@@ -7,10 +7,17 @@ const usePopularMenu = () => {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const response = await axios.get(
-          "https://hungryhulk-server.onrender.com/api/popularmenu"
-        );
-        setPopularMenu(response.data.data);
+        const cachedData = localStorage.getItem("popularMenuData");
+        if (cachedData) {
+          setPopularMenu(JSON.parse(cachedData));
+        } else {
+          const response = await axios.get(
+            "https://hungryhulk-server.onrender.com/api/popularmenu"
+          );
+          const responseData = response.data.data;
+          localStorage.setItem("popularMenuData", JSON.stringify(responseData));
+          setPopularMenu(responseData);
+        }
       } catch (error) {
         console.error("Error fetching data:", error);
       }

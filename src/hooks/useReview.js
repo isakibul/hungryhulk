@@ -7,10 +7,17 @@ const useReview = () => {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const response = await axios.get(
-          "https://hungryhulk-server.onrender.com/api/review"
-        );
-        setReview(response.data.data);
+        const cachedData = localStorage.getItem("reviewData");
+        if (cachedData) {
+          setReview(JSON.parse(cachedData));
+        } else {
+          const response = await axios.get(
+            "https://hungryhulk-server.onrender.com/api/review"
+          );
+          const responseData = response.data.data;
+          localStorage.setItem("reviewData", JSON.stringify(responseData));
+          setReview(responseData);
+        }
       } catch (error) {
         console.error("Error fetching data:", error);
       }
