@@ -24,7 +24,9 @@ const BlogDetails = () => {
             <img src={blog.blogImageUrl} alt={blog.title} />
             <p className='text-2xl md:text-4xl font-bold font-righteous my-5'>{blog.title}</p>
             <div className='mt-10 text-justify flex flex-col gap-5'>
-                <p>{blog.description}</p>
+                <p>{blog.description1}</p>
+                <p>{blog.description2}</p>
+                <p>{blog.description3}</p>
             </div>
         </div>
     );
