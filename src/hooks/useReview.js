@@ -8,7 +8,7 @@ const useReview = () => {
     const fetchData = async () => {
       try {
         const response = await axios.get(
-          "https://hungryhulk.onrender.com/api/review"
+          "https://hungryhulk-server.onrender.com/api/review"
         );
         setReview(response.data.data);
       } catch (error) {

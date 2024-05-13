@@ -8,7 +8,7 @@ const useMenu = () => {
     const fetchData = async () => {
       try {
         const response = await axios.get(
-          "https://hungryhulk.onrender.com/api/menulist"
+          "https://hungryhulk-server.onrender.com/api/menulist"
         );
         setMenu(response.data.data);
       } catch (error) {

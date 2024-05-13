@@ -8,7 +8,7 @@ const useBlog = () => {
     const fetchData = async () => {
       try {
         const response = await axios.get(
-          "https://hungryhulk.onrender.com/api/blog"
+          "https://hungryhulk-server.onrender.com/api/blog"
         );
         setBlogs(response.data.data);
       } catch (error) {
